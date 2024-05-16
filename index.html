@@ -1,0 +1,1832 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="public/styles/style.css" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="icon" href="public/images/fav-icon.png" />
+    <title>Cofee Shop</title>
+  </head>
+  <body class="font-DanaRegular bg-gray-100 dark:bg-zinc-800 transition-colors">
+    <!-- all project icons -->
+    <svg class="hidden">
+      <symbol id="shopping-cart" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+      </symbol>
+
+      <symbol id="moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+      </symbol>
+
+      <symbol id="sun" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+      </symbol>
+
+      <symbol id="arrow-left-on-rectangle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
+      </symbol>
+
+      <symbol id="chevron-left" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+      </symbol>
+
+      <symbol id="plus" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+      </symbol>
+
+      <symbol id="minus" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
+      </symbol>
+
+      <symbol id="bars-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </symbol>
+
+      <symbol id="x-mark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+      </symbol>
+
+      <symbol id="home" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+      </symbol>
+      <symbol id="chevron-down" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+      </symbol>
+
+      <symbol id="arrow-left-right" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
+      </symbol>
+
+      <symbol id="star" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+      </symbol>
+      <symbol id="phone" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+      </symbol>
+
+      <!-- services svg -->
+      <symbol id="dark-support" xmlns="http://www.w3.org/2000/svg" width="66" height="73" viewBox="0 0 66 73" fill="none">
+        <g clip-path="url(#clip0_862_573)">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M55.2975 53.8429C57.7465 53.8429 60.0952 52.8716 61.8269 51.1427C63.5585 49.4139 64.5314 47.069 64.5314 44.6241C64.5314 42.1791 63.5585 39.8343 61.8269 38.1054C60.0952 36.3765 57.7465 35.4053 55.2975 35.4053V53.8429Z" fill="#FDBA74" />
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M56.7643 52.2348V37.0095C58.5368 37.3503 60.1351 38.2968 61.2845 39.6863C62.4339 41.0759 63.0626 42.8218 63.0626 44.624C63.0626 46.4261 62.4339 48.172 61.2845 49.5616C60.1351 50.9512 58.5368 51.8977 56.7643 52.2385V52.2348ZM57.5032 8.47917C54.8257 5.79116 51.6424 3.65805 48.1364 2.20247C44.6304 0.74689 40.8708 -0.00244141 37.0737 -0.00244141C33.2766 -0.00244141 29.517 0.74689 26.0109 2.20247C22.5049 3.65805 19.3217 5.79116 16.6442 8.47917C14.5925 10.523 12.8568 12.8603 11.4941 15.4142C10.6315 17.7652 13.414 18.3393 14.0891 16.7768C16.797 11.649 21.1468 7.57426 26.4449 5.20256C31.7429 2.83086 37.6839 2.29884 43.3201 3.69139C48.9564 5.08393 53.9631 8.3208 57.5418 12.8857C61.1204 17.4505 63.0647 23.0804 63.0646 28.8772V37.282C62.0669 36.2255 60.8634 35.3839 59.5281 34.8087C58.1927 34.2335 56.7537 33.9369 55.2993 33.9371C54.9098 33.9371 54.5363 34.0916 54.2609 34.3666C53.9855 34.6416 53.8307 35.0145 53.8307 35.4034V53.8428C53.8307 54.0353 53.8687 54.226 53.9425 54.4039C54.0163 54.5817 54.1245 54.7434 54.2609 54.8795C54.3972 55.0157 54.5591 55.1237 54.7373 55.1974C54.9155 55.2711 55.1065 55.309 55.2993 55.309C58.1082 55.3051 60.8031 54.2 62.8038 52.2318C64.8045 50.2635 65.951 47.5896 65.9963 44.7857C65.9963 44.7675 65.9963 39.4647 65.9963 28.8772C66.0019 25.0858 65.2542 21.331 63.7967 17.83C62.3392 14.3291 60.2007 11.1514 57.505 8.48099L57.5032 8.47917Z" fill="#fff" />
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M63.3157 53.6885C62.9882 53.6884 62.6707 53.8017 62.4174 54.009C62.1641 54.2164 61.9907 54.5051 61.9267 54.8258C61.8627 55.1465 61.9121 55.4795 62.0664 55.768C62.2207 56.0564 62.4705 56.2825 62.7731 56.4078C63.0757 56.533 63.4124 56.5496 63.7259 56.4548C64.0394 56.3599 64.3102 56.1595 64.4923 55.8876C64.6743 55.6158 64.7563 55.2893 64.7243 54.9638C64.6923 54.6383 64.5482 54.334 64.3166 54.1027C64.0503 53.8389 63.6909 53.6902 63.3157 53.6885Z" fill="#fff" />
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M42.1183 67.7146L44.202 67.2731L44.6442 69.3534L42.5605 69.7949L42.1183 67.7146ZM62.5205 58.3014C62.1826 58.109 61.782 58.0584 61.4067 58.1606C61.0314 58.2627 60.712 58.5094 60.5187 58.8464C59.1194 61.2737 57.2478 63.3968 55.0141 65.0908C52.7804 66.7848 50.2297 68.0155 47.5123 68.7102L46.7735 65.2382C46.7334 65.0498 46.6566 64.8711 46.5475 64.7124C46.4383 64.5537 46.2988 64.4179 46.1371 64.313C45.9754 64.208 45.7945 64.1359 45.6049 64.1008C45.4153 64.0656 45.2205 64.0681 45.0319 64.1081L40.0764 65.1601C39.6957 65.2411 39.3628 65.4699 39.1509 65.7959C38.939 66.1219 38.8654 66.5186 38.9463 66.8988L40 71.8461C40.04 72.0345 40.1168 72.2132 40.226 72.3719C40.3352 72.5307 40.4746 72.6664 40.6363 72.7713C40.7981 72.8763 40.9789 72.9484 41.1686 72.9835C41.3582 73.0187 41.5529 73.0162 41.7416 72.9762L46.697 71.9243C50.1009 71.2776 53.3249 69.9056 56.1493 67.9017C58.9736 65.8978 61.3317 63.3093 63.0628 60.3127C63.1604 60.1453 63.2237 59.9602 63.2493 59.7683C63.2748 59.5763 63.262 59.3812 63.2115 59.1942C63.1611 59.0072 63.0741 58.832 62.9555 58.6787C62.8369 58.5255 62.689 58.3973 62.5205 58.3014Z" fill="#fff" />
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M4.98453 55.7978C3.66255 55.7978 2.39472 55.2735 1.45994 54.3402C0.525155 53.407 0 52.1412 0 50.8214V24.7293C0 24.0758 0.128929 23.4287 0.379425 22.8249C0.629921 22.2212 0.997079 21.6726 1.45994 21.2105C1.92279 20.7484 2.47228 20.3818 3.07703 20.1317C3.68179 19.8816 4.32995 19.7529 4.98453 19.7529H40.8881C41.5427 19.7529 42.1908 19.8816 42.7956 20.1317C43.4003 20.3818 43.9498 20.7484 44.4127 21.2105C44.8755 21.6726 45.2427 22.2212 45.4932 22.8249C45.7437 23.4287 45.8726 24.0758 45.8726 24.7293V57.5275C45.8749 58.1836 45.673 58.8243 45.2948 59.3609C44.9166 59.8975 44.3808 60.3036 43.7614 60.5231C43.142 60.7425 42.4696 60.7644 41.8372 60.5858C41.2048 60.4072 40.6436 60.0369 40.2311 59.526L37.2029 55.8014L4.98453 55.7978ZM4.98453 22.4655C4.68654 22.465 4.39138 22.5233 4.11595 22.6368C3.84052 22.7504 3.59024 22.9171 3.37945 23.1274C3.16865 23.3377 3.00147 23.5874 2.88749 23.8623C2.7735 24.1372 2.71496 24.4318 2.7152 24.7293V50.8232C2.7152 51.4231 2.9539 51.9985 3.3788 52.4227C3.8037 52.8469 4.37999 53.0852 4.98089 53.0852H38.5041L42.3476 57.8091C42.4067 57.8814 42.4867 57.9338 42.5767 57.9589C42.6668 57.9841 42.7624 57.9808 42.8505 57.9495C42.9386 57.9183 43.0149 57.8606 43.0688 57.7844C43.1228 57.7082 43.1518 57.6172 43.152 57.5238V24.7293C43.152 24.1294 42.9133 23.5541 42.4884 23.1299C42.0635 22.7057 41.4872 22.4673 40.8863 22.4673L4.98453 22.4655Z" fill="#10B981" />
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M31.2867 36.3644H40.4259V38.7373L35.6342 50.5651H32.6806L37.3321 39.0425H31.2867V36.3644ZM27.6852 36.1119V38.7082H26.1693V41.1228H23.3558V38.7082H16.6643V36.1101L21.5378 26.6369H24.5296L19.6761 36.1101H23.3558V32.7434H26.1656V36.1119H27.6852ZM5.69066 41.121V39.0316L10.5223 34.0407C11.3909 33.3231 11.9664 32.313 12.1402 31.2009C12.1552 30.9554 12.118 30.7094 12.031 30.4793C11.9439 30.2491 11.8091 30.04 11.6353 29.8656C11.4615 29.6912 11.2527 29.5556 11.0226 29.4675C10.7925 29.3795 10.5463 29.3412 10.3003 29.355C9.78397 29.3623 9.28187 29.5251 8.85975 29.822C8.43763 30.119 8.11514 30.5362 7.93451 31.0192L5.58875 29.6402C5.98057 28.7331 6.63421 27.9632 7.46625 27.4286C8.2983 26.894 9.27101 26.619 10.2603 26.6387C10.8652 26.6062 11.4703 26.6978 12.0384 26.9079C12.6064 27.118 13.1253 27.4422 13.5629 27.8604C14.0006 28.2785 14.3477 28.7819 14.5828 29.3392C14.8179 29.8966 14.9361 30.4962 14.93 31.101C14.8624 31.974 14.6221 32.825 14.2229 33.6047C13.8236 34.3843 13.2735 35.0772 12.6042 35.6431L9.83442 38.4266H15.152V41.1246L5.69066 41.121Z" fill="#fff" />
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M34.3803 27.1387L21.7579 50.5654H22.9809L35.5978 27.1405L34.3803 27.1387Z" fill="#EDB56A" />
+        </g>
+        <defs>
+          <clipPath id="clip0_862_573">
+            <rect width="66" height="73" fill="white" />
+          </clipPath>
+        </defs>
+      </symbol>
+
+      <symbol id="light-support" xmlns="http://www.w3.org/2000/svg" width="66" height="73" viewBox="0 0 66 73" fill="none">
+        <g clip-path="url(#clip0_862_573)">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M55.2975 53.8429C57.7465 53.8429 60.0952 52.8716 61.8269 51.1427C63.5585 49.4139 64.5314 47.069 64.5314 44.6241C64.5314 42.1791 63.5585 39.8343 61.8269 38.1054C60.0952 36.3765 57.7465 35.4053 55.2975 35.4053V53.8429Z" fill="#FDBA74" />
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M56.7643 52.2348V37.0095C58.5368 37.3503 60.1351 38.2968 61.2845 39.6863C62.4339 41.0759 63.0626 42.8218 63.0626 44.624C63.0626 46.4261 62.4339 48.172 61.2845 49.5616C60.1351 50.9512 58.5368 51.8977 56.7643 52.2385V52.2348ZM57.5032 8.47917C54.8257 5.79116 51.6424 3.65805 48.1364 2.20247C44.6304 0.74689 40.8708 -0.00244141 37.0737 -0.00244141C33.2766 -0.00244141 29.517 0.74689 26.0109 2.20247C22.5049 3.65805 19.3217 5.79116 16.6442 8.47917C14.5925 10.523 12.8568 12.8603 11.4941 15.4142C10.6315 17.7652 13.414 18.3393 14.0891 16.7768C16.797 11.649 21.1468 7.57426 26.4449 5.20256C31.7429 2.83086 37.6839 2.29884 43.3201 3.69139C48.9564 5.08393 53.9631 8.3208 57.5418 12.8857C61.1204 17.4505 63.0647 23.0804 63.0646 28.8772V37.282C62.0669 36.2255 60.8634 35.3839 59.5281 34.8087C58.1927 34.2335 56.7537 33.9369 55.2993 33.9371C54.9098 33.9371 54.5363 34.0916 54.2609 34.3666C53.9855 34.6416 53.8307 35.0145 53.8307 35.4034V53.8428C53.8307 54.0353 53.8687 54.226 53.9425 54.4039C54.0163 54.5817 54.1245 54.7434 54.2609 54.8795C54.3972 55.0157 54.5591 55.1237 54.7373 55.1974C54.9155 55.2711 55.1065 55.309 55.2993 55.309C58.1082 55.3051 60.8031 54.2 62.8038 52.2318C64.8045 50.2635 65.951 47.5896 65.9963 44.7857C65.9963 44.7675 65.9963 39.4647 65.9963 28.8772C66.0019 25.0858 65.2542 21.331 63.7967 17.83C62.3392 14.3291 60.2007 11.1514 57.505 8.48099L57.5032 8.47917Z" fill="#3F3F46" />
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M63.3157 53.6885C62.9882 53.6884 62.6707 53.8017 62.4174 54.009C62.1641 54.2164 61.9907 54.5051 61.9267 54.8258C61.8627 55.1465 61.9121 55.4795 62.0664 55.768C62.2207 56.0564 62.4705 56.2825 62.7731 56.4078C63.0757 56.533 63.4124 56.5496 63.7259 56.4548C64.0394 56.3599 64.3102 56.1595 64.4923 55.8876C64.6743 55.6158 64.7563 55.2893 64.7243 54.9638C64.6923 54.6383 64.5482 54.334 64.3166 54.1027C64.0503 53.8389 63.6909 53.6902 63.3157 53.6885Z" fill="#3F3F46" />
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M42.1183 67.7146L44.202 67.2731L44.6442 69.3534L42.5605 69.7949L42.1183 67.7146ZM62.5205 58.3014C62.1826 58.109 61.782 58.0584 61.4067 58.1606C61.0314 58.2627 60.712 58.5094 60.5187 58.8464C59.1194 61.2737 57.2478 63.3968 55.0141 65.0908C52.7804 66.7848 50.2297 68.0155 47.5123 68.7102L46.7735 65.2382C46.7334 65.0498 46.6566 64.8711 46.5475 64.7124C46.4383 64.5537 46.2988 64.4179 46.1371 64.313C45.9754 64.208 45.7945 64.1359 45.6049 64.1008C45.4153 64.0656 45.2205 64.0681 45.0319 64.1081L40.0764 65.1601C39.6957 65.2411 39.3628 65.4699 39.1509 65.7959C38.939 66.1219 38.8654 66.5186 38.9463 66.8988L40 71.8461C40.04 72.0345 40.1168 72.2132 40.226 72.3719C40.3352 72.5307 40.4746 72.6664 40.6363 72.7713C40.7981 72.8763 40.9789 72.9484 41.1686 72.9835C41.3582 73.0187 41.5529 73.0162 41.7416 72.9762L46.697 71.9243C50.1009 71.2776 53.3249 69.9056 56.1493 67.9017C58.9736 65.8978 61.3317 63.3093 63.0628 60.3127C63.1604 60.1453 63.2237 59.9602 63.2493 59.7683C63.2748 59.5763 63.262 59.3812 63.2115 59.1942C63.1611 59.0072 63.0741 58.832 62.9555 58.6787C62.8369 58.5255 62.689 58.3973 62.5205 58.3014Z" fill="#3F3F46" />
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M4.98453 55.7978C3.66255 55.7978 2.39472 55.2735 1.45994 54.3402C0.525155 53.407 0 52.1412 0 50.8214V24.7293C0 24.0758 0.128929 23.4287 0.379425 22.8249C0.629921 22.2212 0.997079 21.6726 1.45994 21.2105C1.92279 20.7484 2.47228 20.3818 3.07703 20.1317C3.68179 19.8816 4.32995 19.7529 4.98453 19.7529H40.8881C41.5427 19.7529 42.1908 19.8816 42.7956 20.1317C43.4003 20.3818 43.9498 20.7484 44.4127 21.2105C44.8755 21.6726 45.2427 22.2212 45.4932 22.8249C45.7437 23.4287 45.8726 24.0758 45.8726 24.7293V57.5275C45.8749 58.1836 45.673 58.8243 45.2948 59.3609C44.9166 59.8975 44.3808 60.3036 43.7614 60.5231C43.142 60.7425 42.4696 60.7644 41.8372 60.5858C41.2048 60.4072 40.6436 60.0369 40.2311 59.526L37.2029 55.8014L4.98453 55.7978ZM4.98453 22.4655C4.68654 22.465 4.39138 22.5233 4.11595 22.6368C3.84052 22.7504 3.59024 22.9171 3.37945 23.1274C3.16865 23.3377 3.00147 23.5874 2.88749 23.8623C2.7735 24.1372 2.71496 24.4318 2.7152 24.7293V50.8232C2.7152 51.4231 2.9539 51.9985 3.3788 52.4227C3.8037 52.8469 4.37999 53.0852 4.98089 53.0852H38.5041L42.3476 57.8091C42.4067 57.8814 42.4867 57.9338 42.5767 57.9589C42.6668 57.9841 42.7624 57.9808 42.8505 57.9495C42.9386 57.9183 43.0149 57.8606 43.0688 57.7844C43.1228 57.7082 43.1518 57.6172 43.152 57.5238V24.7293C43.152 24.1294 42.9133 23.5541 42.4884 23.1299C42.0635 22.7057 41.4872 22.4673 40.8863 22.4673L4.98453 22.4655Z" fill="#0D9488" />
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M31.2867 36.3644H40.4259V38.7373L35.6342 50.5651H32.6806L37.3321 39.0425H31.2867V36.3644ZM27.6852 36.1119V38.7082H26.1693V41.1228H23.3558V38.7082H16.6643V36.1101L21.5378 26.6369H24.5296L19.6761 36.1101H23.3558V32.7434H26.1656V36.1119H27.6852ZM5.69066 41.121V39.0316L10.5223 34.0407C11.3909 33.3231 11.9664 32.313 12.1402 31.2009C12.1552 30.9554 12.118 30.7094 12.031 30.4793C11.9439 30.2491 11.8091 30.04 11.6353 29.8656C11.4615 29.6912 11.2527 29.5556 11.0226 29.4675C10.7925 29.3795 10.5463 29.3412 10.3003 29.355C9.78397 29.3623 9.28187 29.5251 8.85975 29.822C8.43763 30.119 8.11514 30.5362 7.93451 31.0192L5.58875 29.6402C5.98057 28.7331 6.63421 27.9632 7.46625 27.4286C8.2983 26.894 9.27101 26.619 10.2603 26.6387C10.8652 26.6062 11.4703 26.6978 12.0384 26.9079C12.6064 27.118 13.1253 27.4422 13.5629 27.8604C14.0006 28.2785 14.3477 28.7819 14.5828 29.3392C14.8179 29.8966 14.9361 30.4962 14.93 31.101C14.8624 31.974 14.6221 32.825 14.2229 33.6047C13.8236 34.3843 13.2735 35.0772 12.6042 35.6431L9.83442 38.4266H15.152V41.1246L5.69066 41.121Z" fill="#3F3F46" />
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M34.3803 27.1387L21.7579 50.5654H22.9809L35.5978 27.1405L34.3803 27.1387Z" fill="#EDB56A" />
+        </g>
+        <defs>
+          <clipPath id="clip0_862_573">
+            <rect width="66" height="73" fill="white" />
+          </clipPath>
+        </defs>
+      </symbol>
+
+      <symbol id="location" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+      </symbol>
+
+      <symbol id="envelop" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+      </symbol>
+    </svg>
+    <header class="w-full lg:fixed lg:z-10 lg:top-6 max-w-[1920px] mx-auto left-0 right-0">
+      <!-- desktop header -->
+      <div class="w-[90%] mx-auto hidden lg:flex items-center bg-black/50 backdrop-blur-sm rounded-3xl h-24 px-10">
+        <div class="w-full flex items-center justify-between h-14">
+          <!-- logo & menu -->
+          <nav class="flex items-center gap-x-9">
+            <!-- logo -->
+            <div class="logo-box">
+              <img src="public/images/app-logo.png" class="w-15" alt="" />
+            </div>
+            <!-- menu -->
+            <ul class="flex items-center gap-x-9">
+              <li class="flex items-center">
+                <a href="" class="text-orange-200 hover:text-orange-300 transition-colors h-7 flex items-center tracking-tighter">صفحه اصلی</a>
+              </li>
+              <!-- has submenu -->
+              <li class="relative group flex items-center">
+                <a href="" class="text-gray-300 hover:text-orange-300 group-hover:text-orange-300 transition-colors h-7 flex items-center tracking-tighter">فروشگاه</a>
+                <!-- submenu -->
+                <div class="absolute top-full right-0 w-52 pt-3 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-opacity">
+                  <ul class="bg-white dark:bg-zinc-700 rounded-2xl shadow border-t-3 border-orange-300 py-2">
+                    <li class="px-5 py-2">
+                      <a href="" class="text-base text-zinc-700 dark:text-white hover:text-orange-300 transition-colors">قهوه ویژه</a>
+                    </li>
+                    <li class="px-5 py-2">
+                      <a href="" class="text-base text-zinc-700 dark:text-white hover:text-orange-300 transition-colors">ویژه در سطح جهانی</a>
+                    </li>
+                    <li class="px-5 py-2">
+                      <a href="" class="text-base text-zinc-700 dark:text-white hover:text-orange-300 transition-colors">قهوه درجه یک</a>
+                    </li>
+                    <li class="px-5 py-2">
+                      <a href="" class="text-base text-zinc-700 dark:text-white hover:text-orange-300 transition-colors">ترکیبات تجاری</a>
+                    </li>
+                    <li class="px-5 py-2">
+                      <a href="" class="text-base text-zinc-700 dark:text-white hover:text-orange-300 transition-colors">کپسول قهوه</a>
+                    </li>
+                    <li class="px-5 py-2">
+                      <a href="" class="text-base text-zinc-700 dark:text-white hover:text-orange-300 transition-colors">قهوه زینو برزیلی</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="flex items-center">
+                <a href="" class="text-gray-300 hover:text-orange-300 transition-colors h-7 flex items-center tracking-tighter">دیکشنری</a>
+              </li>
+              <li class="flex items-center">
+                <a href="" class="text-gray-300 hover:text-orange-300 transition-colors h-7 flex items-center tracking-tighter">بلاگ</a>
+              </li>
+              <li class="flex items-center">
+                <a href="" class="text-gray-300 hover:text-orange-300 transition-colors h-7 flex items-center tracking-tighter">درباره ما</a>
+              </li>
+              <li class="flex items-center">
+                <a href="" class="text-gray-300 hover:text-orange-300 transition-colors h-7 flex items-center tracking-tighter">تماس با ما</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- login & cart & switch theme btn box -->
+          <div class="h-14 flex items-center justify-between gap-x-10 text-orange-200 select-none">
+            <!-- cart & switch theme btn box -->
+            <div class="flex items-center gap-x-5 h-14">
+              <!-- cart -->
+              <div class="flex items-center justify-center relative group h-7">
+                <svg class="w-7 h-7 cursor-pointer">
+                  <use href="#shopping-cart"></use>
+                </svg>
+                <div class="w-100 absolute left-0 top-full pt-3 invisible opacity-0 transition-opacity group-hover:visible group-hover:opacity-100 hover:visible hover:opacity-100">
+                  <!-- cart with product -->
+                  <div class="bg-white dark:bg-zinc-700 rounded-2xl shadow border-t-3 border-orange-300 p-5 flex-col">
+                    <div class="flex items-center justify-between font-DanaMedium">
+                      <span class="text-gray-300 text-xs">1 مورد</span>
+                      <a href="" class="flex items-center gap-x-2">
+                        <span class="text-xs">مشاهده سبد خرید</span>
+                        <svg class="w-5 h-5">
+                          <use href="#chevron-left"></use>
+                        </svg>
+                      </a>
+                    </div>
+                    <div class="cart-body">
+                      <!-- cart by product withouth increase -->
+                      <div class="flex items-center gap-x-5 border-b py-5 border-b-gray-300 hidden">
+                        <img src="public/images/p4.png" alt="" />
+                        <div class="product-info flex flex-col gap-y-3">
+                          <a href="#" class="text-zinc-700 dark:text-white text-base font-DanaMedium">قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی</a>
+                          <span class="text-xs font-DanaMedium text-teal-600 mt-2">14.500 تومان تخفیف</span>
+                          <span class="text-xl font-DanaDemiBold text-zinc-700 dark:text-white">175,000 تومان</span>
+                        </div>
+                      </div>
+                      <!-- cart by product with increase -->
+
+                      <div class="flex items-center gap-x-5 border-b py-5 border-b-gray-300">
+                        <img src="public/images/p4.png" alt="" class="w-28" />
+                        <div class="product-info flex flex-col gap-y-3">
+                          <a href="#" class="text-zinc-700 dark:text-white text-base font-DanaMedium">قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی</a>
+                          <div class="flex gap-x-5">
+                            <div class="flex flex-grow">
+                              <div class="w-24 h-11 px-3 rounded-full border border-gray-300 flex items-center justify-between">
+                                <button class="flex items-center justify-center">
+                                  <svg class="w-4 h-4 text-orange-300">
+                                    <use href="#plus"></use>
+                                  </svg>
+                                </button>
+                                <span class="text-xl font-DanaDemiBold tracking-tighter leading-7 text-orange-300">2</span>
+                                <button class="flex items-center justify-center">
+                                  <svg class="w-4 h-4 text-orange-300">
+                                    <use href="#minus"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="flex flex-col flex-grow">
+                              <span class="text-xs font-DanaMedium text-teal-600 mt-2">14.500 تومان تخفیف</span>
+                              <span class="text-xl font-DanaDemiBold text-zinc-700 dark:text-white">175,000 <span class="text-sm">تومان</span></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cart-footer flex items-center justify-between pt-5">
+                      <div class="flex flex-col gap-y-2">
+                        <span class="text-gray-300 text-xs">مبلغ قابل پرداخت</span>
+                        <span class="text-xl font-DanaDemiBold text-zinc-700 dark:text-white">350,000 تومان</span>
+                      </div>
+                      <a href="" class="w-36 h-14 flex items-center justify-center text-xl rounded-xl transition-colors bg-teal-600 hover:bg-teal-700 dark:bg-emerald-500 dark:hover:bg-emerald-600 text-white">ثبت سفارش</a>
+                    </div>
+                  </div>
+                  <!-- cart withouth product -->
+                  <div class="bg-white h-72 dark:bg-zinc-700 rounded-2xl shadow border-t-3 border-orange-300 p-5 flex flex-col items-center justify-evenly hidden">
+                    <svg class="w-14 h-14 cursor-pointer text-gray-400">
+                      <use href="#shopping-cart"></use>
+                    </svg>
+                    <p class="text-zinc-700 dark:text-white text-base font-DanaMedium">هنوز محصولی به سبد خرید اضافه نشده</p>
+                    <a href="" class="w-64 h-14 flex items-center justify-center text-xl rounded-xl transition-colors bg-teal-600 hover:bg-teal-700 dark:bg-emerald-500 dark:hover:bg-emerald-600 text-white">مشاهده صفحه فروشگاه</a>
+                  </div>
+                </div>
+              </div>
+              <!-- switch theme btn box -->
+              <div class="h-full flex items-center justify-center">
+                <button class="flex items-center switchTheme-btn">
+                  <svg class="w-7 h-7 cursor-pointer hidden dark:block">
+                    <use href="#sun"></use>
+                  </svg>
+                  <svg class="w-7 h-7 cursor-pointer block dark:hidden">
+                    <use href="#moon"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <!-- line between boxes -->
+            <span class="w-[1px] h-full bg-white/20"></span>
+            <!-- login link -->
+            <a href="" class="flex items-center justify-center gap-x-4">
+              <svg class="w-7 h-7 rotate-180">
+                <use href="#arrow-left-on-rectangle"></use>
+              </svg>
+              <span class="hidden xl:inline-block tracking-tighter">ورود | ثبت نام</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- mobile header -->
+      <div class="mobile-header flex lg:hidden bg-white dark:bg-zinc-700 w-full h-16 items-center justify-between px-4 relative">
+        <button class="aside-show-btn">
+          <svg class="w-6 h-6 text-zinc-700 dark:text-white">
+            <use href="#bars-3"></use>
+          </svg>
+        </button>
+        <a href="">
+          <img src="public/images/logo-type.svg" class="w-24" alt="" />
+        </a>
+        <button class="open_mobile_userBasket-btn">
+          <svg class="w-6 h-6 text-zinc-700 dark:text-white">
+            <use href="#shopping-cart"></use>
+          </svg>
+        </button>
+        <!-- menu sidebar -->
+        <aside class="sidebar w-64 h-full overflow-y-auto transition-all fixed top-0 -right-full bg-white dark:bg-zinc-700 z-20 px-4 py-3">
+          <div class="flex items-center justify-between pb-4 border-b-1 border-gray-100 dark:border-[rgba(255,255,255,.2)]">
+            <a href="" class="flex items-center gap-x-2">
+              <img src="public/images/app-logo.png" class="w-10" alt="" />
+              <img src="public/images/logo-type.svg" class="w-24" alt="" />
+            </a>
+            <button class="close-sidebar-btn">
+              <svg class="w-5 h-5 text-zinc-700 dark:text-white">
+                <use href="#x-mark"></use>
+              </svg>
+            </button>
+          </div>
+          <nav class="py-6 border-b-1 border-gray-100 dark:border-[rgba(255,255,255,.2)]">
+            <ul class="flex flex-col gap-y-3">
+              <li>
+                <a href="#" class="w-full h-10 p-2.5 rounded-md flex items-center gap-2 text-zinc-700 dark:text-white hover:text-orange-300 hover:bg-orange-200/20 transition-colors">
+                  <svg class="w-5 h-5">
+                    <use href="#home"></use>
+                  </svg>
+                  <span class="text-base"> صفحه اصلی</span>
+                </a>
+              </li>
+              <!-- has submneu -->
+              <li>
+                <button class="open-submenu-btn w-full h-10 px-2.5 rounded-md flex items-center justify-between text-zinc-700 dark:text-white hover:text-orange-300 hover:bg-orange-200/20 transition-colors">
+                  <span class="flex items-center gap-2">
+                    <svg class="w-5 h-5">
+                      <use href="#home"></use>
+                    </svg>
+                    <span class="text-base"> صفحه اصلی</span>
+                  </span>
+                  <svg class="w-4 h-4 transition-transform" id="chevron-down-icon">
+                    <use href="#chevron-down"></use>
+                  </svg>
+                </button>
+                <!-- submneu -->
+                <ul class="responsive-submenu h-0 overflow-hidden pr-7 py-2 hidden">
+                  <li>
+                    <a href="" class="w-full h-10 rounded-md flex items-center gap-2 text-zinc-700 dark:text-white hover:text-orange-300 transition-colors">
+                      <span class="text-sm"> صفحه اصلی</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="w-full h-10 rounded-md flex items-center gap-2 text-zinc-700 dark:text-white hover:text-orange-300 transition-colors">
+                      <span class="text-sm"> صفحه اصلی</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="w-full h-10 rounded-md flex items-center gap-2 text-zinc-700 dark:text-white hover:text-orange-300 transition-colors">
+                      <span class="text-sm"> صفحه اصلی</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="w-full h-10 rounded-md flex items-center gap-2 text-zinc-700 dark:text-white hover:text-orange-300 transition-colors">
+                      <span class="text-sm"> صفحه اصلی</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="w-full h-10 rounded-md flex items-center gap-2 text-zinc-700 dark:text-white hover:text-orange-300 transition-colors">
+                      <span class="text-sm"> صفحه اصلی</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="w-full h-10 rounded-md flex items-center gap-2 text-zinc-700 dark:text-white hover:text-orange-300 transition-colors">
+                      <span class="text-sm"> صفحه اصلی</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" class="w-full h-10 px-2.5 rounded-md flex items-center gap-2 text-zinc-700 dark:text-white hover:text-orange-300 hover:bg-orange-200/20 transition-colors">
+                  <svg class="w-5 h-5">
+                    <use href="#home"></use>
+                  </svg>
+                  <span class="text-base"> صفحه اصلی</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="w-full h-10 px-2.5 rounded-md flex items-center gap-2 text-zinc-700 dark:text-white hover:text-orange-300 hover:bg-orange-200/20 transition-colors">
+                  <svg class="w-5 h-5">
+                    <use href="#home"></use>
+                  </svg>
+                  <span class="text-base"> صفحه اصلی</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="w-full h-10 px-2.5 rounded-md flex items-center gap-2 text-zinc-700 dark:text-white hover:text-orange-300 hover:bg-orange-200/20 transition-colors">
+                  <svg class="w-5 h-5">
+                    <use href="#home"></use>
+                  </svg>
+                  <span class="text-base"> صفحه اصلی</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="flex flex-col gap-y-5 pt-6">
+            <a href="" class="flex items-center gap-2 text-orange-300">
+              <svg class="w-5 h-5 -rotate-180">
+                <use href="#arrow-left-on-rectangle"></use>
+              </svg>
+              <span class="text-base">ورود | ثبت نام</span>
+            </a>
+            <button class="flex items-center gap-2 text-orange-300 switchTheme-btn">
+              <svg class="w-5 h-5 hidden dark:block">
+                <use href="#sun"></use>
+              </svg>
+              <svg class="w-5 h-5 block dark:hidden">
+                <use href="#moon"></use>
+              </svg>
+              <span class="text-base hidden dark:inline-block" id="text-theme-label">تم روشن</span>
+              <span class="text-base inline-block dark:hidden" id="text-theme-label">تم تاریک</span>
+            </button>
+            <button href="" class="flex items-center gap-2 text-orange-300 open_mobile_userBasket-btn">
+              <svg class="w-5 h-5">
+                <use href="#shopping-cart"></use>
+              </svg>
+              <span class="text-base">سبد خرید</span>
+            </button>
+          </div>
+        </aside>
+
+        <!-- user basket sidebar -->
+        <aside class="userbasket w-64 h-full overflow-y-auto transition-all fixed top-0 -left-full bg-white dark:bg-zinc-700 z-20 px-4 pt-5 pb-8 flex flex-col items-center justify-between">
+          <!-- header and products section -->
+          <div class="flex flex-col items-center w-full">
+            <div class="w-full flex items-center justify-between pb-5 border-b-1 border-gray-100 dark:border-[rgba(255,255,255,.2)]">
+              <button class="close_userbasket-btn">
+                <svg class="w-5 h-5 text-zinc-700 dark:text-white">
+                  <use href="#x-mark"></use>
+                </svg>
+              </button>
+              <span class="text-base font-DanaMedium text-zinc-700 dark:text-white">سبد خرید</span>
+            </div>
+            <div class="w-full flex flex-col">
+              <div class="w-full flex items-center justify-between py-5 border-b-1 border-gray-100 dark:border-[rgba(255,255,255,.2)]">
+                <a href="" class="w-22 h-22">
+                  <img src="public/images/p1.png" class="w-22 h-22" alt="" />
+                </a>
+                <div class="flex flex-col gap-y-3 w-32">
+                  <a href="" class="text-sm font-DanaMedium text-zinc-700 dark:text-white w-full text-center">قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی</a>
+                  <span class="text-sm font-DanaMedium text-emerald-500 w-full text-center">14.500 تومان تخفیف</span>
+                  <span class="text-base font-DanaDemiBold text-zinc-700 dark:text-white w-full text-center">175,000 تومان</span>
+                </div>
+              </div>
+              <div class="w-full flex items-center justify-between py-5 border-b-1 border-gray-100 dark:border-[rgba(255,255,255,.2)]">
+                <a href="" class="w-22 h-22">
+                  <img src="public/images/p1.png" class="w-22 h-22" alt="" />
+                </a>
+                <div class="flex flex-col gap-y-3 w-32">
+                  <a href="" class="text-sm font-DanaMedium text-zinc-700 dark:text-white w-full text-center">قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی</a>
+                  <span class="text-sm font-DanaMedium text-emerald-500 w-full text-center">14.500 تومان تخفیف</span>
+                  <span class="text-base font-DanaDemiBold text-zinc-700 dark:text-white w-full text-center">175,000 تومان</span>
+                </div>
+              </div>
+              <div class="w-full flex items-center justify-between py-5 border-b-1 border-gray-100 dark:border-[rgba(255,255,255,.2)]">
+                <a href="" class="w-22 h-22">
+                  <img src="public/images/p1.png" class="w-22 h-22" alt="" />
+                </a>
+                <div class="flex flex-col gap-y-3 w-32">
+                  <a href="" class="text-sm font-DanaMedium text-zinc-700 dark:text-white w-full text-center">قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی</a>
+                  <span class="text-sm font-DanaMedium text-emerald-500 w-full text-center">14.500 تومان تخفیف</span>
+                  <span class="text-base font-DanaDemiBold text-zinc-700 dark:text-white w-full text-center">175,000 تومان</span>
+                </div>
+              </div>
+              <div class="w-full flex items-center justify-between py-5 border-b-1 border-gray-100 dark:border-[rgba(255,255,255,.2)]">
+                <a href="" class="w-22 h-22">
+                  <img src="public/images/p1.png" class="w-22 h-22" alt="" />
+                </a>
+                <div class="flex flex-col gap-y-3 w-32">
+                  <a href="" class="text-sm font-DanaMedium text-zinc-700 dark:text-white w-full text-center">قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی</a>
+                  <span class="text-sm font-DanaMedium text-emerald-500 w-full text-center">14.500 تومان تخفیف</span>
+                  <span class="text-base font-DanaDemiBold text-zinc-700 dark:text-white w-full text-center">175,000 تومان</span>
+                </div>
+              </div>
+              <div class="w-full flex items-center justify-between py-5 border-b-1 border-gray-100 dark:border-[rgba(255,255,255,.2)]">
+                <a href="" class="w-22 h-22">
+                  <img src="public/images/p1.png" class="w-22 h-22" alt="" />
+                </a>
+                <div class="flex flex-col gap-y-3 w-32">
+                  <a href="" class="text-sm font-DanaMedium text-zinc-700 dark:text-white w-full text-center">قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی</a>
+                  <span class="text-sm font-DanaMedium text-emerald-500 w-full text-center">14.500 تومان تخفیف</span>
+                  <span class="text-base font-DanaDemiBold text-zinc-700 dark:text-white w-full text-center">175,000 تومان</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- user basket footer -->
+          <div class="flex items-center justify-evenly gap-x-3 pt-4">
+            <a href="" class="w-28 h-11 rounded-xl transition-colors bg-teal-600 hover:bg-teal-700 dark:bg-emerald-500 dark:hover:bg-emerald-600 text-white flex items-center justify-center">ثبت سفارش</a>
+            <div class="flex flex-col items-center gap-y-2">
+              <span class="w-full text-gray-300 text-xs">مبلغ قابل پرداخت</span>
+              <span class="w-full text-zinc-700 dark:text-white text-base font-DanaDemiBold">350,000 <span class="text-xs font-DanaRegular">تومان</span></span>
+            </div>
+          </div>
+        </aside>
+        <div class="sidebar-cover w-full min-h-screen fixed top-0 left-0 z-10 bg-cover invisible opacity-0 transition-opacity"></div>
+      </div>
+    </header>
+    <main class="max-w-[1920px] mx-auto">
+      <!-- section home  -->
+      <section class="w-full lg:h-[905px] bg-mobileSection1Bg md:bg-desktopSection1Bg bg-no-repeat bg-cover bg-[center_top] xl:bg-[unset] aspect-2/1 lg:pl-0 relative" id="section1">
+        <div class="container h-full flex items-center justify-end">
+          <div class="w-[201px] lg:w-[462px] flex flex-col gap-y-2 lg:gap-y-4 items-start">
+            <h2 class="font-MorabaBold text-2xl lg:text-6xl text-white">قهوه عربیکا تانزانیا</h2>
+            <span class="font-MorabaLight text-xl lg:text-5xl text-white">یک فنجان بالانس !</span>
+            <span class="w-[100px] h-px lg:h-0.5 bg-orange-300 shadow my-2 lg:my-4"></span>
+            <p class="font-DanaRegular text-xs lg:text-2xl text-white">قطعا نام آشنای عربیکا را شنیده اید، عربیکا یکی از گونه های قهوه است که در نواحی مختلف کمربند قهوه کشت میشود.</p>
+          </div>
+        </div>
+
+        <div class="absolute bottom-0 mx-auto left-0 right-0 hidden lg:flex justify-center z-[1] transition-colors">
+          <svg width="100" class="text-gray-100 dark:text-zinc-800 transition-colors" height="22" viewBox="0 0 100 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 0C69 0 81 22 100 22L0 22C18.75 22 31 0 50 0Z" fill="currentColor" />
+          </svg>
+        </div>
+
+        <button class="absolute bottom-0 left-0 right-0 z-[7] translate-y-1/2 mx-auto w-7 h-7 rounded-full border-2 border-orange-300 hidden lg:flex items-center justify-center" id="go-bottom-btn">
+          <svg class="w-4 h-4 -rotate-90 text-zinc-700 dark:text-white">
+            <use href="#chevron-left"></use>
+          </svg>
+        </button>
+        <div class="absolute bottom-0 left-0 z-[6] w-full h-24 overflow-hidden hidden lg:block">
+          <span class="block w-22 h-22 border-1 border-white/80 rounded-full absolute bottom-0 left-0 right-0 z-[2] translate-y-1/2 mx-auto"></span>
+          <span class="block w-36 h-36 border-1 border-white/50 rounded-full absolute bottom-0 left-0 right-0 z-[2] translate-y-1/2 mx-auto"></span>
+          <span class="block w-48 h-48 border-1 border-white/25 rounded-full absolute bottom-0 left-0 right-0 z-[2] translate-y-1/2 mx-auto"></span>
+        </div>
+      </section>
+      <!-- section products -->
+      <section class="max-w-[1920px] mx-auto product-section transition-colors">
+        <div class="container pt-8 xl:pt-48 flex flex-col gap-y-5 lg:gap-y-12">
+          <div class="flex flex-col gap-y-1 lg:gap-y-4">
+            <h2 class="font-MorabaMedium text-2xl lg:text-5xl text-zinc-700 dark:text-white leading-[32px] lg:leading-[48px]">جدیدترین محصولات</h2>
+            <div class="flex items-center justify-between">
+              <span class="font-MorabaLight text-lg lg:text-3xl text-zinc-700 dark:text-white leading-[32px] lg:leading-[48px]">فرآوری شده از دانه قهوه</span>
+              <a href="" class="text-base lg:text-xl tracking-tighter leading-7 flex items-center gap-x-1 text-orange-300 px-3 py-[6px] rounded-md hover:bg-orange-200/20 transition-colors">
+                مشاهده همه <span class="hidden lg:block">محصولات</span>
+                <svg class="w-5 h-5">
+                  <use href="#chevron-left"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- product container -->
+          <div class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+            <div class="flex flex-col items-center justify-center gap-y-5 rounded-2xl shadow bg-white dark:bg-zinc-700 transition-colors p-2 lg:p-5 relative">
+              <!-- product box header -->
+              <div class="w-32 h-32 lg:w-64 lg:h-64 flex items-center justify-center">
+                <a href=""><img src="public/images/p3.png" class="w-32 h-32 lg:w-64 lg:h-64" alt="" /></a>
+                <span class="flex items-center justify-center absolute right-2 top-2 lg:right-6 lg:top-6 w-10 h-5 lg:w-12 lg:h-7 rounded-[100px] bg-orange-300 font-DanaDemiBold text-xs lg:text-base text-white dark:text-zinc-700 transition-colors">60%</span>
+              </div>
+              <!-- product box body -->
+              <div class="flex flex-col gap-y-3">
+                <a href="" class="text-sm lg:text-xl leading-[28px] font-DanaMedium text-zinc-700 dark:text-white transition-colors">قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی</a>
+                <div class="flex items-center gap-x-2.5">
+                  <span class="text-base lg:text-xl leading-[28.6px] font-DanaDemiBold text-emerald-500">154,000 <span class="font-DanaRegular text-xs lg:text-sm leading-[20.02px] tracking-[-5%]">تومان</span></span>
+                  <span class="text-base lg:text-xl leading-[28.6px] text-gray-400 relative"
+                    >175,000
+                    <span class="font-DanaRegular hidden lg:inline-block text-sm leading-[20.02px] tracking-[-5%]">تومان</span>
+                    <span class="block absolute right-0 top-1/2 w-full h-px bg-red-500"></span>
+                  </span>
+                </div>
+              </div>
+              <!-- product box footer -->
+              <div class="flex items-center justify-between w-full">
+                <div class="flex items-center gap-x-[10px] lg:gap-x-3">
+                  <button class="w-6 h-6 lg:w-9 lg:h-9 rounded-full bg-gray-100 dark:bg-zinc-800 flex items-center justify-center group hover:bg-teal-600 dark:hover:bg-emerald-500 transition-colors">
+                    <svg class="w-4 h-4 lg:w-[22px] lg:h-[22px] text-gray-400 group-hover:text-white transition-colors">
+                      <use href="#shopping-cart"></use>
+                    </svg>
+                  </button>
+                  <button class="w-4 h-4 lg:w-6 lg:h-6 flex items-center justify-center">
+                    <svg class="w-4 h-4 lg:w-[22px] lg:h-[22px] text-gray-400 hover:text-teal-600 dark:hover:text-emerald-500 transition-colors">
+                      <use href="#arrow-left-right"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="flex items-center">
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-gray-300">
+                    <use href="#star"></use>
+                  </svg>
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                    <use href="#star"></use>
+                  </svg>
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                    <use href="#star"></use>
+                  </svg>
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                    <use href="#star"></use>
+                  </svg>
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                    <use href="#star"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col items-center justify-center gap-y-5 rounded-2xl shadow bg-white dark:bg-zinc-700 transition-colors p-2 lg:p-5 relative">
+              <!-- product box header -->
+              <div class="w-32 h-32 lg:w-64 lg:h-64 flex items-center justify-center">
+                <a href=""><img src="public/images/p3.png" class="w-32 h-32 lg:w-64 lg:h-64" alt="" /></a>
+                <span class="flex items-center justify-center absolute right-2 top-2 lg:right-6 lg:top-6 w-10 h-5 lg:w-12 lg:h-7 rounded-[100px] bg-orange-300 font-DanaDemiBold text-xs lg:text-base text-white dark:text-zinc-700 transition-colors">60%</span>
+              </div>
+              <!-- product box body -->
+              <div class="flex flex-col gap-y-3">
+                <a href="" class="text-sm lg:text-xl leading-[28px] font-DanaMedium text-zinc-700 dark:text-white transition-colors">قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی</a>
+                <span class="text-red-400 text-base lg:text-xl">فعلا موجود نیست</span>
+                <!-- <div class="flex items-center gap-x-2.5">
+                  <span class="text-base lg:text-xl leading-[28.6px] font-DanaDemiBold text-emerald-500">154,000 <span class="font-DanaRegular text-xs lg:text-sm leading-[20.02px] tracking-[-5%]">تومان</span></span>
+                  <span class="text-base lg:text-xl leading-[28.6px] text-gray-400 relative"
+                    >175,000
+                    <span class="font-DanaRegular hidden lg:inline-block text-sm leading-[20.02px] tracking-[-5%]">تومان</span>
+                    <span class="block absolute right-0 top-1/2 w-full h-px bg-red-500"></span>
+                  </span>
+                </div> -->
+              </div>
+              <!-- product box footer -->
+              <div class="flex items-center justify-between w-full">
+                <div class="flex items-center gap-x-[10px] lg:gap-x-3">
+                  <button class="w-6 h-6 lg:w-9 lg:h-9 rounded-full bg-gray-100 dark:bg-zinc-800 flex items-center justify-center group hover:bg-teal-600 dark:hover:bg-emerald-500 transition-colors">
+                    <svg class="w-4 h-4 lg:w-[22px] lg:h-[22px] text-gray-400 group-hover:text-white transition-colors">
+                      <use href="#shopping-cart"></use>
+                    </svg>
+                  </button>
+                  <button class="w-4 h-4 lg:w-6 lg:h-6 flex items-center justify-center">
+                    <svg class="w-4 h-4 lg:w-[22px] lg:h-[22px] text-gray-400 hover:text-teal-600 dark:hover:text-emerald-500 transition-colors">
+                      <use href="#arrow-left-right"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="flex items-center">
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-gray-300">
+                    <use href="#star"></use>
+                  </svg>
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                    <use href="#star"></use>
+                  </svg>
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                    <use href="#star"></use>
+                  </svg>
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                    <use href="#star"></use>
+                  </svg>
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                    <use href="#star"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col items-center justify-center gap-y-5 rounded-2xl shadow bg-white dark:bg-zinc-700 transition-colors p-2 lg:p-5 relative">
+              <!-- product box header -->
+              <div class="w-32 h-32 lg:w-64 lg:h-64 flex items-center justify-center">
+                <a href=""><img src="public/images/p3.png" class="w-32 h-32 lg:w-64 lg:h-64" alt="" /></a>
+                <span class="flex items-center justify-center absolute right-2 top-2 lg:right-6 lg:top-6 w-10 h-5 lg:w-12 lg:h-7 rounded-[100px] bg-orange-300 font-DanaDemiBold text-xs lg:text-base text-white dark:text-zinc-700 transition-colors">60%</span>
+              </div>
+              <!-- product box body -->
+              <div class="flex flex-col gap-y-3">
+                <a href="" class="text-sm lg:text-xl leading-[28px] font-DanaMedium text-zinc-700 dark:text-white transition-colors">قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی</a>
+                <div class="flex items-center gap-x-2.5">
+                  <span class="text-base lg:text-xl leading-[28.6px] font-DanaDemiBold text-emerald-500">154,000 <span class="font-DanaRegular text-xs lg:text-sm leading-[20.02px] tracking-[-5%]">تومان</span></span>
+                  <span class="text-base lg:text-xl leading-[28.6px] text-gray-400 relative"
+                    >175,000
+                    <span class="font-DanaRegular hidden lg:inline-block text-sm leading-[20.02px] tracking-[-5%]">تومان</span>
+                    <span class="block absolute right-0 top-1/2 w-full h-px bg-red-500"></span>
+                  </span>
+                </div>
+              </div>
+              <!-- product box footer -->
+              <div class="flex items-center justify-between w-full">
+                <div class="flex items-center gap-x-[10px] lg:gap-x-3">
+                  <button class="w-6 h-6 lg:w-9 lg:h-9 rounded-full bg-gray-100 dark:bg-zinc-800 flex items-center justify-center group hover:bg-teal-600 dark:hover:bg-emerald-500 transition-colors">
+                    <svg class="w-4 h-4 lg:w-[22px] lg:h-[22px] text-gray-400 group-hover:text-white transition-colors">
+                      <use href="#shopping-cart"></use>
+                    </svg>
+                  </button>
+                  <button class="w-4 h-4 lg:w-6 lg:h-6 flex items-center justify-center">
+                    <svg class="w-4 h-4 lg:w-[22px] lg:h-[22px] text-gray-400 hover:text-teal-600 dark:hover:text-emerald-500 transition-colors">
+                      <use href="#arrow-left-right"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="flex items-center">
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-gray-300">
+                    <use href="#star"></use>
+                  </svg>
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                    <use href="#star"></use>
+                  </svg>
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                    <use href="#star"></use>
+                  </svg>
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                    <use href="#star"></use>
+                  </svg>
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                    <use href="#star"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col items-center justify-center gap-y-5 rounded-2xl shadow bg-white dark:bg-zinc-700 transition-colors p-2 lg:p-5 relative">
+              <!-- product box header -->
+              <div class="w-32 h-32 lg:w-64 lg:h-64 flex items-center justify-center">
+                <a href=""><img src="public/images/p3.png" class="w-32 h-32 lg:w-64 lg:h-64" alt="" /></a>
+                <span class="flex items-center justify-center absolute right-2 top-2 lg:right-6 lg:top-6 w-10 h-5 lg:w-12 lg:h-7 rounded-[100px] bg-orange-300 font-DanaDemiBold text-xs lg:text-base text-white dark:text-zinc-700 transition-colors">60%</span>
+              </div>
+              <!-- product box body -->
+              <div class="flex flex-col gap-y-3">
+                <a href="" class="text-sm lg:text-xl leading-[28px] font-DanaMedium text-zinc-700 dark:text-white transition-colors">قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی</a>
+                <div class="flex items-center gap-x-2.5">
+                  <span class="text-base lg:text-xl leading-[28.6px] font-DanaDemiBold text-emerald-500">154,000 <span class="font-DanaRegular text-xs lg:text-sm leading-[20.02px] tracking-[-5%]">تومان</span></span>
+                  <span class="text-base lg:text-xl leading-[28.6px] text-gray-400 relative"
+                    >175,000
+                    <span class="font-DanaRegular hidden lg:inline-block text-sm leading-[20.02px] tracking-[-5%]">تومان</span>
+                    <span class="block absolute right-0 top-1/2 w-full h-px bg-red-500"></span>
+                  </span>
+                </div>
+              </div>
+              <!-- product box footer -->
+              <div class="flex items-center justify-between w-full">
+                <div class="flex items-center gap-x-[10px] lg:gap-x-3">
+                  <button class="w-6 h-6 lg:w-9 lg:h-9 rounded-full bg-gray-100 dark:bg-zinc-800 flex items-center justify-center group hover:bg-teal-600 dark:hover:bg-emerald-500 transition-colors">
+                    <svg class="w-4 h-4 lg:w-[22px] lg:h-[22px] text-gray-400 group-hover:text-white transition-colors">
+                      <use href="#shopping-cart"></use>
+                    </svg>
+                  </button>
+                  <button class="w-4 h-4 lg:w-6 lg:h-6 flex items-center justify-center">
+                    <svg class="w-4 h-4 lg:w-[22px] lg:h-[22px] text-gray-400 hover:text-teal-600 dark:hover:text-emerald-500 transition-colors">
+                      <use href="#arrow-left-right"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="flex items-center">
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-gray-300">
+                    <use href="#star"></use>
+                  </svg>
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                    <use href="#star"></use>
+                  </svg>
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                    <use href="#star"></use>
+                  </svg>
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                    <use href="#star"></use>
+                  </svg>
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                    <use href="#star"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col items-center justify-center gap-y-5 rounded-2xl shadow bg-white dark:bg-zinc-700 transition-colors p-2 lg:p-5 relative">
+              <!-- product box header -->
+              <div class="w-32 h-32 lg:w-64 lg:h-64 flex items-center justify-center">
+                <a href=""><img src="public/images/p3.png" class="w-32 h-32 lg:w-64 lg:h-64" alt="" /></a>
+                <span class="flex items-center justify-center absolute right-2 top-2 lg:right-6 lg:top-6 w-10 h-5 lg:w-12 lg:h-7 rounded-[100px] bg-orange-300 font-DanaDemiBold text-xs lg:text-base text-white dark:text-zinc-700 transition-colors">60%</span>
+              </div>
+              <!-- product box body -->
+              <div class="flex flex-col gap-y-3">
+                <a href="" class="text-sm lg:text-xl leading-[28px] font-DanaMedium text-zinc-700 dark:text-white transition-colors">قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی</a>
+                <div class="flex items-center gap-x-2.5">
+                  <span class="text-base lg:text-xl leading-[28.6px] font-DanaDemiBold text-emerald-500">154,000 <span class="font-DanaRegular text-xs lg:text-sm leading-[20.02px] tracking-[-5%]">تومان</span></span>
+                  <span class="text-base lg:text-xl leading-[28.6px] text-gray-400 relative"
+                    >175,000
+                    <span class="font-DanaRegular hidden lg:inline-block text-sm leading-[20.02px] tracking-[-5%]">تومان</span>
+                    <span class="block absolute right-0 top-1/2 w-full h-px bg-red-500"></span>
+                  </span>
+                </div>
+              </div>
+              <!-- product box footer -->
+              <div class="flex items-center justify-between w-full">
+                <div class="flex items-center gap-x-[10px] lg:gap-x-3">
+                  <button class="w-6 h-6 lg:w-9 lg:h-9 rounded-full bg-gray-100 dark:bg-zinc-800 flex items-center justify-center group hover:bg-teal-600 dark:hover:bg-emerald-500 transition-colors">
+                    <svg class="w-4 h-4 lg:w-[22px] lg:h-[22px] text-gray-400 group-hover:text-white transition-colors">
+                      <use href="#shopping-cart"></use>
+                    </svg>
+                  </button>
+                  <button class="w-4 h-4 lg:w-6 lg:h-6 flex items-center justify-center">
+                    <svg class="w-4 h-4 lg:w-[22px] lg:h-[22px] text-gray-400 hover:text-teal-600 dark:hover:text-emerald-500 transition-colors">
+                      <use href="#arrow-left-right"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="flex items-center">
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-gray-300">
+                    <use href="#star"></use>
+                  </svg>
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                    <use href="#star"></use>
+                  </svg>
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                    <use href="#star"></use>
+                  </svg>
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                    <use href="#star"></use>
+                  </svg>
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                    <use href="#star"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col items-center justify-center gap-y-5 rounded-2xl shadow bg-white dark:bg-zinc-700 transition-colors p-2 lg:p-5 relative">
+              <!-- product box header -->
+              <div class="w-32 h-32 lg:w-64 lg:h-64 flex items-center justify-center">
+                <a href=""><img src="public/images/p3.png" class="w-32 h-32 lg:w-64 lg:h-64" alt="" /></a>
+                <span class="flex items-center justify-center absolute right-2 top-2 lg:right-6 lg:top-6 w-10 h-5 lg:w-12 lg:h-7 rounded-[100px] bg-orange-300 font-DanaDemiBold text-xs lg:text-base text-white dark:text-zinc-700 transition-colors">60%</span>
+              </div>
+              <!-- product box body -->
+              <div class="flex flex-col gap-y-3">
+                <a href="" class="text-sm lg:text-xl leading-[28px] font-DanaMedium text-zinc-700 dark:text-white transition-colors">قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی</a>
+                <div class="flex items-center gap-x-2.5">
+                  <span class="text-base lg:text-xl leading-[28.6px] font-DanaDemiBold text-emerald-500">154,000 <span class="font-DanaRegular text-xs lg:text-sm leading-[20.02px] tracking-[-5%]">تومان</span></span>
+                  <span class="text-base lg:text-xl leading-[28.6px] text-gray-400 relative"
+                    >175,000
+                    <span class="font-DanaRegular hidden lg:inline-block text-sm leading-[20.02px] tracking-[-5%]">تومان</span>
+                    <span class="block absolute right-0 top-1/2 w-full h-px bg-red-500"></span>
+                  </span>
+                </div>
+              </div>
+              <!-- product box footer -->
+              <div class="flex items-center justify-between w-full">
+                <div class="flex items-center gap-x-[10px] lg:gap-x-3">
+                  <button class="w-6 h-6 lg:w-9 lg:h-9 rounded-full bg-gray-100 dark:bg-zinc-800 flex items-center justify-center group hover:bg-teal-600 dark:hover:bg-emerald-500 transition-colors">
+                    <svg class="w-4 h-4 lg:w-[22px] lg:h-[22px] text-gray-400 group-hover:text-white transition-colors">
+                      <use href="#shopping-cart"></use>
+                    </svg>
+                  </button>
+                  <button class="w-4 h-4 lg:w-6 lg:h-6 flex items-center justify-center">
+                    <svg class="w-4 h-4 lg:w-[22px] lg:h-[22px] text-gray-400 hover:text-teal-600 dark:hover:text-emerald-500 transition-colors">
+                      <use href="#arrow-left-right"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="flex items-center">
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-gray-300">
+                    <use href="#star"></use>
+                  </svg>
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                    <use href="#star"></use>
+                  </svg>
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                    <use href="#star"></use>
+                  </svg>
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                    <use href="#star"></use>
+                  </svg>
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                    <use href="#star"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col items-center justify-center gap-y-5 rounded-2xl shadow bg-white dark:bg-zinc-700 transition-colors p-2 lg:p-5 relative">
+              <!-- product box header -->
+              <div class="w-32 h-32 lg:w-64 lg:h-64 flex items-center justify-center">
+                <a href=""><img src="public/images/p3.png" class="w-32 h-32 lg:w-64 lg:h-64" alt="" /></a>
+                <span class="flex items-center justify-center absolute right-2 top-2 lg:right-6 lg:top-6 w-10 h-5 lg:w-12 lg:h-7 rounded-[100px] bg-orange-300 font-DanaDemiBold text-xs lg:text-base text-white dark:text-zinc-700 transition-colors">60%</span>
+              </div>
+              <!-- product box body -->
+              <div class="flex flex-col gap-y-3">
+                <a href="" class="text-sm lg:text-xl leading-[28px] font-DanaMedium text-zinc-700 dark:text-white transition-colors">قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی</a>
+                <div class="flex items-center gap-x-2.5">
+                  <span class="text-base lg:text-xl leading-[28.6px] font-DanaDemiBold text-emerald-500">154,000 <span class="font-DanaRegular text-xs lg:text-sm leading-[20.02px] tracking-[-5%]">تومان</span></span>
+                  <span class="text-base lg:text-xl leading-[28.6px] text-gray-400 relative"
+                    >175,000
+                    <span class="font-DanaRegular hidden lg:inline-block text-sm leading-[20.02px] tracking-[-5%]">تومان</span>
+                    <span class="block absolute right-0 top-1/2 w-full h-px bg-red-500"></span>
+                  </span>
+                </div>
+              </div>
+              <!-- product box footer -->
+              <div class="flex items-center justify-between w-full">
+                <div class="flex items-center gap-x-[10px] lg:gap-x-3">
+                  <button class="w-6 h-6 lg:w-9 lg:h-9 rounded-full bg-gray-100 dark:bg-zinc-800 flex items-center justify-center group hover:bg-teal-600 dark:hover:bg-emerald-500 transition-colors">
+                    <svg class="w-4 h-4 lg:w-[22px] lg:h-[22px] text-gray-400 group-hover:text-white transition-colors">
+                      <use href="#shopping-cart"></use>
+                    </svg>
+                  </button>
+                  <button class="w-4 h-4 lg:w-6 lg:h-6 flex items-center justify-center">
+                    <svg class="w-4 h-4 lg:w-[22px] lg:h-[22px] text-gray-400 hover:text-teal-600 dark:hover:text-emerald-500 transition-colors">
+                      <use href="#arrow-left-right"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="flex items-center">
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-gray-300">
+                    <use href="#star"></use>
+                  </svg>
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                    <use href="#star"></use>
+                  </svg>
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                    <use href="#star"></use>
+                  </svg>
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                    <use href="#star"></use>
+                  </svg>
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                    <use href="#star"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col items-center justify-center gap-y-5 rounded-2xl shadow bg-white dark:bg-zinc-700 transition-colors p-2 lg:p-5 relative">
+              <!-- product box header -->
+              <div class="w-32 h-32 lg:w-64 lg:h-64 flex items-center justify-center">
+                <a href=""><img src="public/images/p3.png" class="w-32 h-32 lg:w-64 lg:h-64" alt="" /></a>
+                <span class="flex items-center justify-center absolute right-2 top-2 lg:right-6 lg:top-6 w-10 h-5 lg:w-12 lg:h-7 rounded-[100px] bg-orange-300 font-DanaDemiBold text-xs lg:text-base text-white dark:text-zinc-700 transition-colors">60%</span>
+              </div>
+              <!-- product box body -->
+              <div class="flex flex-col gap-y-3">
+                <a href="" class="text-sm lg:text-xl leading-[28px] font-DanaMedium text-zinc-700 dark:text-white transition-colors">قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی</a>
+                <div class="flex items-center gap-x-2.5">
+                  <span class="text-base lg:text-xl leading-[28.6px] font-DanaDemiBold text-emerald-500">154,000 <span class="font-DanaRegular text-xs lg:text-sm leading-[20.02px] tracking-[-5%]">تومان</span></span>
+                  <span class="text-base lg:text-xl leading-[28.6px] text-gray-400 relative"
+                    >175,000
+                    <span class="font-DanaRegular hidden lg:inline-block text-sm leading-[20.02px] tracking-[-5%]">تومان</span>
+                    <span class="block absolute right-0 top-1/2 w-full h-px bg-red-500"></span>
+                  </span>
+                </div>
+              </div>
+              <!-- product box footer -->
+              <div class="flex items-center justify-between w-full">
+                <div class="flex items-center gap-x-[10px] lg:gap-x-3">
+                  <button class="w-6 h-6 lg:w-9 lg:h-9 rounded-full bg-gray-100 dark:bg-zinc-800 flex items-center justify-center group hover:bg-teal-600 dark:hover:bg-emerald-500 transition-colors">
+                    <svg class="w-4 h-4 lg:w-[22px] lg:h-[22px] text-gray-400 group-hover:text-white transition-colors">
+                      <use href="#shopping-cart"></use>
+                    </svg>
+                  </button>
+                  <button class="w-4 h-4 lg:w-6 lg:h-6 flex items-center justify-center">
+                    <svg class="w-4 h-4 lg:w-[22px] lg:h-[22px] text-gray-400 hover:text-teal-600 dark:hover:text-emerald-500 transition-colors">
+                      <use href="#arrow-left-right"></use>
+                    </svg>
+                  </button>
+                </div>
+                <div class="flex items-center">
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-gray-300">
+                    <use href="#star"></use>
+                  </svg>
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                    <use href="#star"></use>
+                  </svg>
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                    <use href="#star"></use>
+                  </svg>
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                    <use href="#star"></use>
+                  </svg>
+                  <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                    <use href="#star"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- category section -->
+      <section class="max-w-[1920px] mx-auto pt-8 lg:pt-20">
+        <div class="container grid grid-cols-1 md:grid-cols-2 gap-5 pb-10 lg:pb-20">
+          <div class="category-box category-rigth rounded-2xl bg-categoryRight bg-cover w-full aspect-2.5/1 flex flex-col justify-center px-7 gap-y-4 lg:gap-y-7">
+            <h2 class="font-DanaDemiBold text-2xl lg:text-4xl leading-[24px] text-white">انواع قهوه</h2>
+            <span class="font-DanaMedium text-base lg:text-xl leading-[24px] text-white">ترکیبی و تک خاستگاه</span>
+          </div>
+          <div class="category-box category-left rounded-2xl bg-categoryLeft bg-cover w-full aspect-2.5/1 flex flex-col justify-center px-7 gap-y-4 lg:gap-y-7">
+            <h2 class="font-DanaDemiBold text-2xl lg:text-4xl leading-[24px] text-white">پودر های فوری</h2>
+            <span class="font-DanaMedium text-base lg:text-xl leading-[24px] text-white">نسکافه ، هات چاکلت ، ماسالا</span>
+          </div>
+        </div>
+        <div class="container flex justify-center items-center gap-7 lg:gap-14 flex-wrap">
+          <div class="flex flex-col items-center gap-y-[6px] lg:gap-y-2.5 w-[100px] lg:w-[200px]">
+            <a href="">
+              <img src="public/images/category1.png" alt="" />
+            </a>
+            <a href="" class="font-DanaDemiBold text-sm lg:text-xl leading-[20px] lg:leading-[28px] text-zinc-700 dark:text-white text-center transition-colors">قهوه دمی و اسپرسو</a>
+          </div>
+          <div class="flex flex-col items-center gap-y-[6px] lg:gap-y-2.5 w-[100px] lg:w-[200px]">
+            <a href="">
+              <img src="public/images/category2.png" alt="" />
+            </a>
+            <a href="" class="font-DanaDemiBold text-sm lg:text-xl leading-[20px] lg:leading-[28px] text-zinc-700 dark:text-white text-center transition-colors">لوازم جانبی و تجهیزات</a>
+          </div>
+          <div class="flex flex-col items-center gap-y-[6px] lg:gap-y-2.5 w-[100px] lg:w-[200px]">
+            <a href="">
+              <img src="public/images/category3.png" alt="" />
+            </a>
+            <a href="" class="font-DanaDemiBold text-sm lg:text-xl leading-[20px] lg:leading-[28px] text-zinc-700 dark:text-white text-center transition-colors">اسپرسو ساز</a>
+          </div>
+          <div class="flex flex-col items-center gap-y-[6px] lg:gap-y-2.5 w-[100px] lg:w-[200px]">
+            <a href="">
+              <img src="public/images/category4.png" alt="" />
+            </a>
+            <a href="" class="font-DanaDemiBold text-sm lg:text-xl leading-[20px] lg:leading-[28px] text-zinc-700 dark:text-white text-center transition-colors">پک تستر قهوه</a>
+          </div>
+          <div class="flex flex-col items-center gap-y-[6px] lg:gap-y-2.5 w-[100px] lg:w-[200px]">
+            <a href="">
+              <img src="public/images/category5.png" alt="" />
+            </a>
+            <a href="" class="font-DanaDemiBold text-sm lg:text-xl leading-[20px] lg:leading-[28px] text-zinc-700 dark:text-white text-center transition-colors">قهوه ترک</a>
+          </div>
+        </div>
+      </section>
+      <!-- product slider section -->
+      <section class="max-w-[1920px] mx-auto pt-8 lg:pt-20 pb-8 lg:pb-20">
+        <div class="container flex flex-col">
+          <div class="flex flex-col gap-y-1 lg:gap-y-4 pb-4 lg:pb-12">
+            <h2 class="font-MorabaMedium text-2xl lg:text-5xl text-zinc-700 dark:text-white leading-[32px] lg:leading-[48px] transition-colors">محصولات پر فروش</h2>
+            <div class="flex items-center justify-between">
+              <span class="font-MorabaLight text-lg lg:text-3xl text-zinc-700 dark:text-white leading-[32px] lg:leading-[48px] transition-colors">پیشنهاد قهوه خور ها ...</span>
+              <!-- slider prev and next btn -->
+              <div class="flex items-center gap-x-3 lg:gap-x-[18px]">
+                <!-- right btn -->
+                <button tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-2a67144ce91f43b0" aria-disabled="false" class="swiper-button-prev1 w-9 h-9 lg:w-11 lg:h-11 bg-white dark:bg-zinc-700 flex items-center justify-center rounded-full rotate-180 text-zinc-700 dark:text-white transition-colors dark:hover:bg-white hover:bg-gray-300 dark:hover:text-zinc-700">
+                  <svg class="w-5 lg:w-6 h-5 lg:h-6">
+                    <use href="#chevron-left"></use>
+                  </svg>
+                </button>
+                <!-- left btn -->
+                <button class="swiper-button-next1 w-9 h-9 lg:w-11 lg:h-11 bg-white dark:bg-zinc-700 flex items-center justify-center rounded-full text-zinc-700 dark:text-white transition-colors dark:hover:bg-white hover:bg-gray-300 dark:hover:text-zinc-700" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-996fe1fbf675fd410" aria-disabled="false">
+                  <svg class="w-5 lg:w-6 h-5 lg:h-6">
+                    <use href="#chevron-left"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- swiper -->
+          <div class="swiper mySwiper w-full h-full rounded-2xl">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide flex flex-col items-center justify-center gap-y-5 rounded-2xl shadow bg-white dark:bg-zinc-700 transition-colors p-2 lg:p-5 relative">
+                <!-- product box header -->
+                <div class="w-32 h-32 lg:w-64 lg:h-64 flex items-center justify-center">
+                  <a href=""><img src="public/images/p3.png" class="w-32 h-32 lg:w-64 lg:h-64" alt="" /></a>
+                  <span class="flex items-center justify-center absolute right-2 top-2 lg:right-6 lg:top-6 w-10 h-5 lg:w-12 lg:h-7 rounded-[100px] bg-orange-300 font-DanaDemiBold text-xs lg:text-base text-white dark:text-zinc-700 transition-colors">60%</span>
+                </div>
+                <!-- product box body -->
+                <div class="flex flex-col gap-y-3">
+                  <a href="" class="text-sm lg:text-xl leading-[28px] font-DanaMedium text-zinc-700 dark:text-white transition-colors">قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی</a>
+                  <div class="flex items-center gap-x-2.5">
+                    <span class="text-base lg:text-xl leading-[28.6px] font-DanaDemiBold text-emerald-500">154,000 <span class="font-DanaRegular text-xs lg:text-sm leading-[20.02px] tracking-[-5%]">تومان</span></span>
+                    <span class="text-base lg:text-xl leading-[28.6px] text-gray-400 relative"
+                      >175,000
+                      <span class="font-DanaRegular hidden lg:inline-block text-sm leading-[20.02px] tracking-[-5%]">تومان</span>
+                      <span class="block absolute right-0 top-1/2 w-full h-px bg-red-500"></span>
+                    </span>
+                  </div>
+                </div>
+                <!-- product box footer -->
+                <div class="flex items-center justify-between w-full">
+                  <div class="flex items-center gap-x-[10px] lg:gap-x-3">
+                    <button class="w-6 h-6 lg:w-9 lg:h-9 rounded-full bg-gray-100 dark:bg-zinc-800 flex items-center justify-center group hover:bg-teal-600 dark:hover:bg-emerald-500 transition-colors">
+                      <svg class="w-4 h-4 lg:w-[22px] lg:h-[22px] text-gray-400 group-hover:text-white transition-colors">
+                        <use href="#shopping-cart"></use>
+                      </svg>
+                    </button>
+                    <button class="w-4 h-4 lg:w-6 lg:h-6 flex items-center justify-center">
+                      <svg class="w-4 h-4 lg:w-[22px] lg:h-[22px] text-gray-400 hover:text-teal-600 dark:hover:text-emerald-500 transition-colors">
+                        <use href="#arrow-left-right"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="flex items-center">
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-gray-300">
+                      <use href="#star"></use>
+                    </svg>
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                      <use href="#star"></use>
+                    </svg>
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                      <use href="#star"></use>
+                    </svg>
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                      <use href="#star"></use>
+                    </svg>
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                      <use href="#star"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide flex flex-col items-center justify-center gap-y-5 rounded-2xl shadow bg-white dark:bg-zinc-700 transition-colors p-2 lg:p-5 relative">
+                <!-- product box header -->
+                <div class="w-32 h-32 lg:w-64 lg:h-64 flex items-center justify-center">
+                  <a href=""><img src="public/images/p3.png" class="w-32 h-32 lg:w-64 lg:h-64" alt="" /></a>
+                  <span class="flex items-center justify-center absolute right-2 top-2 lg:right-6 lg:top-6 w-10 h-5 lg:w-12 lg:h-7 rounded-[100px] bg-orange-300 font-DanaDemiBold text-xs lg:text-base text-white dark:text-zinc-700 transition-colors">60%</span>
+                </div>
+                <!-- product box body -->
+                <div class="flex flex-col gap-y-3">
+                  <a href="" class="text-sm lg:text-xl leading-[28px] font-DanaMedium text-zinc-700 dark:text-white transition-colors">قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی</a>
+                  <div class="flex items-center gap-x-2.5">
+                    <span class="text-base lg:text-xl leading-[28.6px] font-DanaDemiBold text-emerald-500">154,000 <span class="font-DanaRegular text-xs lg:text-sm leading-[20.02px] tracking-[-5%]">تومان</span></span>
+                    <span class="text-base lg:text-xl leading-[28.6px] text-gray-400 relative"
+                      >175,000
+                      <span class="font-DanaRegular hidden lg:inline-block text-sm leading-[20.02px] tracking-[-5%]">تومان</span>
+                      <span class="block absolute right-0 top-1/2 w-full h-px bg-red-500"></span>
+                    </span>
+                  </div>
+                </div>
+                <!-- product box footer -->
+                <div class="flex items-center justify-between w-full">
+                  <div class="flex items-center gap-x-[10px] lg:gap-x-3">
+                    <button class="w-6 h-6 lg:w-9 lg:h-9 rounded-full bg-gray-100 dark:bg-zinc-800 flex items-center justify-center group hover:bg-teal-600 dark:hover:bg-emerald-500 transition-colors">
+                      <svg class="w-4 h-4 lg:w-[22px] lg:h-[22px] text-gray-400 group-hover:text-white transition-colors">
+                        <use href="#shopping-cart"></use>
+                      </svg>
+                    </button>
+                    <button class="w-4 h-4 lg:w-6 lg:h-6 flex items-center justify-center">
+                      <svg class="w-4 h-4 lg:w-[22px] lg:h-[22px] text-gray-400 hover:text-teal-600 dark:hover:text-emerald-500 transition-colors">
+                        <use href="#arrow-left-right"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="flex items-center">
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-gray-300">
+                      <use href="#star"></use>
+                    </svg>
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                      <use href="#star"></use>
+                    </svg>
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                      <use href="#star"></use>
+                    </svg>
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                      <use href="#star"></use>
+                    </svg>
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                      <use href="#star"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide flex flex-col items-center justify-center gap-y-5 rounded-2xl shadow bg-white dark:bg-zinc-700 transition-colors p-2 lg:p-5 relative">
+                <!-- product box header -->
+                <div class="w-32 h-32 lg:w-64 lg:h-64 flex items-center justify-center">
+                  <a href=""><img src="public/images/p3.png" class="w-32 h-32 lg:w-64 lg:h-64" alt="" /></a>
+                  <span class="flex items-center justify-center absolute right-2 top-2 lg:right-6 lg:top-6 w-10 h-5 lg:w-12 lg:h-7 rounded-[100px] bg-orange-300 font-DanaDemiBold text-xs lg:text-base text-white dark:text-zinc-700 transition-colors">60%</span>
+                </div>
+                <!-- product box body -->
+                <div class="flex flex-col gap-y-3">
+                  <a href="" class="text-sm lg:text-xl leading-[28px] font-DanaMedium text-zinc-700 dark:text-white transition-colors">قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی</a>
+                  <div class="flex items-center gap-x-2.5">
+                    <span class="text-base lg:text-xl leading-[28.6px] font-DanaDemiBold text-emerald-500">154,000 <span class="font-DanaRegular text-xs lg:text-sm leading-[20.02px] tracking-[-5%]">تومان</span></span>
+                    <span class="text-base lg:text-xl leading-[28.6px] text-gray-400 relative"
+                      >175,000
+                      <span class="font-DanaRegular hidden lg:inline-block text-sm leading-[20.02px] tracking-[-5%]">تومان</span>
+                      <span class="block absolute right-0 top-1/2 w-full h-px bg-red-500"></span>
+                    </span>
+                  </div>
+                </div>
+                <!-- product box footer -->
+                <div class="flex items-center justify-between w-full">
+                  <div class="flex items-center gap-x-[10px] lg:gap-x-3">
+                    <button class="w-6 h-6 lg:w-9 lg:h-9 rounded-full bg-gray-100 dark:bg-zinc-800 flex items-center justify-center group hover:bg-teal-600 dark:hover:bg-emerald-500 transition-colors">
+                      <svg class="w-4 h-4 lg:w-[22px] lg:h-[22px] text-gray-400 group-hover:text-white transition-colors">
+                        <use href="#shopping-cart"></use>
+                      </svg>
+                    </button>
+                    <button class="w-4 h-4 lg:w-6 lg:h-6 flex items-center justify-center">
+                      <svg class="w-4 h-4 lg:w-[22px] lg:h-[22px] text-gray-400 hover:text-teal-600 dark:hover:text-emerald-500 transition-colors">
+                        <use href="#arrow-left-right"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="flex items-center">
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-gray-300">
+                      <use href="#star"></use>
+                    </svg>
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                      <use href="#star"></use>
+                    </svg>
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                      <use href="#star"></use>
+                    </svg>
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                      <use href="#star"></use>
+                    </svg>
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                      <use href="#star"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide flex flex-col items-center justify-center gap-y-5 rounded-2xl shadow bg-white dark:bg-zinc-700 transition-colors p-2 lg:p-5 relative">
+                <!-- product box header -->
+                <div class="w-32 h-32 lg:w-64 lg:h-64 flex items-center justify-center">
+                  <a href=""><img src="public/images/p3.png" class="w-32 h-32 lg:w-64 lg:h-64" alt="" /></a>
+                  <span class="flex items-center justify-center absolute right-2 top-2 lg:right-6 lg:top-6 w-10 h-5 lg:w-12 lg:h-7 rounded-[100px] bg-orange-300 font-DanaDemiBold text-xs lg:text-base text-white dark:text-zinc-700 transition-colors">60%</span>
+                </div>
+                <!-- product box body -->
+                <div class="flex flex-col gap-y-3">
+                  <a href="" class="text-sm lg:text-xl leading-[28px] font-DanaMedium text-zinc-700 dark:text-white transition-colors">قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی</a>
+                  <div class="flex items-center gap-x-2.5">
+                    <span class="text-base lg:text-xl leading-[28.6px] font-DanaDemiBold text-emerald-500">154,000 <span class="font-DanaRegular text-xs lg:text-sm leading-[20.02px] tracking-[-5%]">تومان</span></span>
+                    <span class="text-base lg:text-xl leading-[28.6px] text-gray-400 relative"
+                      >175,000
+                      <span class="font-DanaRegular hidden lg:inline-block text-sm leading-[20.02px] tracking-[-5%]">تومان</span>
+                      <span class="block absolute right-0 top-1/2 w-full h-px bg-red-500"></span>
+                    </span>
+                  </div>
+                </div>
+                <!-- product box footer -->
+                <div class="flex items-center justify-between w-full">
+                  <div class="flex items-center gap-x-[10px] lg:gap-x-3">
+                    <button class="w-6 h-6 lg:w-9 lg:h-9 rounded-full bg-gray-100 dark:bg-zinc-800 flex items-center justify-center group hover:bg-teal-600 dark:hover:bg-emerald-500 transition-colors">
+                      <svg class="w-4 h-4 lg:w-[22px] lg:h-[22px] text-gray-400 group-hover:text-white transition-colors">
+                        <use href="#shopping-cart"></use>
+                      </svg>
+                    </button>
+                    <button class="w-4 h-4 lg:w-6 lg:h-6 flex items-center justify-center">
+                      <svg class="w-4 h-4 lg:w-[22px] lg:h-[22px] text-gray-400 hover:text-teal-600 dark:hover:text-emerald-500 transition-colors">
+                        <use href="#arrow-left-right"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="flex items-center">
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-gray-300">
+                      <use href="#star"></use>
+                    </svg>
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                      <use href="#star"></use>
+                    </svg>
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                      <use href="#star"></use>
+                    </svg>
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                      <use href="#star"></use>
+                    </svg>
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                      <use href="#star"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide flex flex-col items-center justify-center gap-y-5 rounded-2xl shadow bg-white dark:bg-zinc-700 transition-colors p-2 lg:p-5 relative">
+                <!-- product box header -->
+                <div class="w-32 h-32 lg:w-64 lg:h-64 flex items-center justify-center">
+                  <a href=""><img src="public/images/p3.png" class="w-32 h-32 lg:w-64 lg:h-64" alt="" /></a>
+                  <span class="flex items-center justify-center absolute right-2 top-2 lg:right-6 lg:top-6 w-10 h-5 lg:w-12 lg:h-7 rounded-[100px] bg-orange-300 font-DanaDemiBold text-xs lg:text-base text-white dark:text-zinc-700 transition-colors">60%</span>
+                </div>
+                <!-- product box body -->
+                <div class="flex flex-col gap-y-3">
+                  <a href="" class="text-sm lg:text-xl leading-[28px] font-DanaMedium text-zinc-700 dark:text-white transition-colors">قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی</a>
+                  <div class="flex items-center gap-x-2.5">
+                    <span class="text-base lg:text-xl leading-[28.6px] font-DanaDemiBold text-emerald-500">154,000 <span class="font-DanaRegular text-xs lg:text-sm leading-[20.02px] tracking-[-5%]">تومان</span></span>
+                    <span class="text-base lg:text-xl leading-[28.6px] text-gray-400 relative"
+                      >175,000
+                      <span class="font-DanaRegular hidden lg:inline-block text-sm leading-[20.02px] tracking-[-5%]">تومان</span>
+                      <span class="block absolute right-0 top-1/2 w-full h-px bg-red-500"></span>
+                    </span>
+                  </div>
+                </div>
+                <!-- product box footer -->
+                <div class="flex items-center justify-between w-full">
+                  <div class="flex items-center gap-x-[10px] lg:gap-x-3">
+                    <button class="w-6 h-6 lg:w-9 lg:h-9 rounded-full bg-gray-100 dark:bg-zinc-800 flex items-center justify-center group hover:bg-teal-600 dark:hover:bg-emerald-500 transition-colors">
+                      <svg class="w-4 h-4 lg:w-[22px] lg:h-[22px] text-gray-400 group-hover:text-white transition-colors">
+                        <use href="#shopping-cart"></use>
+                      </svg>
+                    </button>
+                    <button class="w-4 h-4 lg:w-6 lg:h-6 flex items-center justify-center">
+                      <svg class="w-4 h-4 lg:w-[22px] lg:h-[22px] text-gray-400 hover:text-teal-600 dark:hover:text-emerald-500 transition-colors">
+                        <use href="#arrow-left-right"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="flex items-center">
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-gray-300">
+                      <use href="#star"></use>
+                    </svg>
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                      <use href="#star"></use>
+                    </svg>
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                      <use href="#star"></use>
+                    </svg>
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                      <use href="#star"></use>
+                    </svg>
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                      <use href="#star"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide flex flex-col items-center justify-center gap-y-5 rounded-2xl shadow bg-white dark:bg-zinc-700 transition-colors p-2 lg:p-5 relative">
+                <!-- product box header -->
+                <div class="w-32 h-32 lg:w-64 lg:h-64 flex items-center justify-center">
+                  <a href=""><img src="public/images/p3.png" class="w-32 h-32 lg:w-64 lg:h-64" alt="" /></a>
+                  <span class="flex items-center justify-center absolute right-2 top-2 lg:right-6 lg:top-6 w-10 h-5 lg:w-12 lg:h-7 rounded-[100px] bg-orange-300 font-DanaDemiBold text-xs lg:text-base text-white dark:text-zinc-700 transition-colors">60%</span>
+                </div>
+                <!-- product box body -->
+                <div class="flex flex-col gap-y-3">
+                  <a href="" class="text-sm lg:text-xl leading-[28px] font-DanaMedium text-zinc-700 dark:text-white transition-colors">قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی</a>
+                  <div class="flex items-center gap-x-2.5">
+                    <span class="text-base lg:text-xl leading-[28.6px] font-DanaDemiBold text-emerald-500">154,000 <span class="font-DanaRegular text-xs lg:text-sm leading-[20.02px] tracking-[-5%]">تومان</span></span>
+                    <span class="text-base lg:text-xl leading-[28.6px] text-gray-400 relative"
+                      >175,000
+                      <span class="font-DanaRegular hidden lg:inline-block text-sm leading-[20.02px] tracking-[-5%]">تومان</span>
+                      <span class="block absolute right-0 top-1/2 w-full h-px bg-red-500"></span>
+                    </span>
+                  </div>
+                </div>
+                <!-- product box footer -->
+                <div class="flex items-center justify-between w-full">
+                  <div class="flex items-center gap-x-[10px] lg:gap-x-3">
+                    <button class="w-6 h-6 lg:w-9 lg:h-9 rounded-full bg-gray-100 dark:bg-zinc-800 flex items-center justify-center group hover:bg-teal-600 dark:hover:bg-emerald-500 transition-colors">
+                      <svg class="w-4 h-4 lg:w-[22px] lg:h-[22px] text-gray-400 group-hover:text-white transition-colors">
+                        <use href="#shopping-cart"></use>
+                      </svg>
+                    </button>
+                    <button class="w-4 h-4 lg:w-6 lg:h-6 flex items-center justify-center">
+                      <svg class="w-4 h-4 lg:w-[22px] lg:h-[22px] text-gray-400 hover:text-teal-600 dark:hover:text-emerald-500 transition-colors">
+                        <use href="#arrow-left-right"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="flex items-center">
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-gray-300">
+                      <use href="#star"></use>
+                    </svg>
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                      <use href="#star"></use>
+                    </svg>
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                      <use href="#star"></use>
+                    </svg>
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                      <use href="#star"></use>
+                    </svg>
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                      <use href="#star"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide flex flex-col items-center justify-center gap-y-5 rounded-2xl shadow bg-white dark:bg-zinc-700 transition-colors p-2 lg:p-5 relative">
+                <!-- product box header -->
+                <div class="w-32 h-32 lg:w-64 lg:h-64 flex items-center justify-center">
+                  <a href=""><img src="public/images/p3.png" class="w-32 h-32 lg:w-64 lg:h-64" alt="" /></a>
+                  <span class="flex items-center justify-center absolute right-2 top-2 lg:right-6 lg:top-6 w-10 h-5 lg:w-12 lg:h-7 rounded-[100px] bg-orange-300 font-DanaDemiBold text-xs lg:text-base text-white dark:text-zinc-700 transition-colors">60%</span>
+                </div>
+                <!-- product box body -->
+                <div class="flex flex-col gap-y-3">
+                  <a href="" class="text-sm lg:text-xl leading-[28px] font-DanaMedium text-zinc-700 dark:text-white transition-colors">قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی</a>
+                  <div class="flex items-center gap-x-2.5">
+                    <span class="text-base lg:text-xl leading-[28.6px] font-DanaDemiBold text-emerald-500">154,000 <span class="font-DanaRegular text-xs lg:text-sm leading-[20.02px] tracking-[-5%]">تومان</span></span>
+                    <span class="text-base lg:text-xl leading-[28.6px] text-gray-400 relative"
+                      >175,000
+                      <span class="font-DanaRegular hidden lg:inline-block text-sm leading-[20.02px] tracking-[-5%]">تومان</span>
+                      <span class="block absolute right-0 top-1/2 w-full h-px bg-red-500"></span>
+                    </span>
+                  </div>
+                </div>
+                <!-- product box footer -->
+                <div class="flex items-center justify-between w-full">
+                  <div class="flex items-center gap-x-[10px] lg:gap-x-3">
+                    <button class="w-6 h-6 lg:w-9 lg:h-9 rounded-full bg-gray-100 dark:bg-zinc-800 flex items-center justify-center group hover:bg-teal-600 dark:hover:bg-emerald-500 transition-colors">
+                      <svg class="w-4 h-4 lg:w-[22px] lg:h-[22px] text-gray-400 group-hover:text-white transition-colors">
+                        <use href="#shopping-cart"></use>
+                      </svg>
+                    </button>
+                    <button class="w-4 h-4 lg:w-6 lg:h-6 flex items-center justify-center">
+                      <svg class="w-4 h-4 lg:w-[22px] lg:h-[22px] text-gray-400 hover:text-teal-600 dark:hover:text-emerald-500 transition-colors">
+                        <use href="#arrow-left-right"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="flex items-center">
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-gray-300">
+                      <use href="#star"></use>
+                    </svg>
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                      <use href="#star"></use>
+                    </svg>
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                      <use href="#star"></use>
+                    </svg>
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                      <use href="#star"></use>
+                    </svg>
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                      <use href="#star"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide flex flex-col items-center justify-center gap-y-5 rounded-2xl shadow bg-white dark:bg-zinc-700 transition-colors p-2 lg:p-5 relative">
+                <!-- product box header -->
+                <div class="w-32 h-32 lg:w-64 lg:h-64 flex items-center justify-center">
+                  <a href=""><img src="public/images/p3.png" class="w-32 h-32 lg:w-64 lg:h-64" alt="" /></a>
+                  <span class="flex items-center justify-center absolute right-2 top-2 lg:right-6 lg:top-6 w-10 h-5 lg:w-12 lg:h-7 rounded-[100px] bg-orange-300 font-DanaDemiBold text-xs lg:text-base text-white dark:text-zinc-700 transition-colors">60%</span>
+                </div>
+                <!-- product box body -->
+                <div class="flex flex-col gap-y-3">
+                  <a href="" class="text-sm lg:text-xl leading-[28px] font-DanaMedium text-zinc-700 dark:text-white transition-colors">قهوه ترک بن مانو مقدار 250 گرم خط دوم اسم طولانی</a>
+                  <div class="flex items-center gap-x-2.5">
+                    <span class="text-base lg:text-xl leading-[28.6px] font-DanaDemiBold text-emerald-500">154,000 <span class="font-DanaRegular text-xs lg:text-sm leading-[20.02px] tracking-[-5%]">تومان</span></span>
+                    <span class="text-base lg:text-xl leading-[28.6px] text-gray-400 relative"
+                      >175,000
+                      <span class="font-DanaRegular hidden lg:inline-block text-sm leading-[20.02px] tracking-[-5%]">تومان</span>
+                      <span class="block absolute right-0 top-1/2 w-full h-px bg-red-500"></span>
+                    </span>
+                  </div>
+                </div>
+                <!-- product box footer -->
+                <div class="flex items-center justify-between w-full">
+                  <div class="flex items-center gap-x-[10px] lg:gap-x-3">
+                    <button class="w-6 h-6 lg:w-9 lg:h-9 rounded-full bg-gray-100 dark:bg-zinc-800 flex items-center justify-center group hover:bg-teal-600 dark:hover:bg-emerald-500 transition-colors">
+                      <svg class="w-4 h-4 lg:w-[22px] lg:h-[22px] text-gray-400 group-hover:text-white transition-colors">
+                        <use href="#shopping-cart"></use>
+                      </svg>
+                    </button>
+                    <button class="w-4 h-4 lg:w-6 lg:h-6 flex items-center justify-center">
+                      <svg class="w-4 h-4 lg:w-[22px] lg:h-[22px] text-gray-400 hover:text-teal-600 dark:hover:text-emerald-500 transition-colors">
+                        <use href="#arrow-left-right"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="flex items-center">
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-gray-300">
+                      <use href="#star"></use>
+                    </svg>
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                      <use href="#star"></use>
+                    </svg>
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                      <use href="#star"></use>
+                    </svg>
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                      <use href="#star"></use>
+                    </svg>
+                    <svg class="w-4 lg:w-6 h-4 lg:h-6 text-yellow-400">
+                      <use href="#star"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end swiper -->
+        </div>
+      </section>
+      <!-- coffee club banner section -->
+      <div class="container">
+        <div class="bg-clubBg rounded-2xl flex items-center flex-wrap px-4 lg:px-11 py-8 lg:py-6">
+          <div class="grow flex items-center gap-x-6">
+            <img src="public/images/diamond.png" alt="" class="w-22 lg:w-28" />
+            <div class="flex flex-col gap-2">
+              <h2 class="font-MorabaBold font-bold text-2xl lg:text-5xl text-white leading-[28px] lg:leading-[48px]">کافی کلاب</h2>
+              <p class="font-MorabaLight text-lg lg:text-2xl text-white leading-[28px] lg:leading-[48px]">میدونستی میتونی با امتیاز هات قهوه بگیری ؟</p>
+            </div>
+          </div>
+          <div class="grow flex items-end lg:items-center justify-center xs:justify-between gap-x-3">
+            <div class="flex items-center justify-between gap-x-2 lg:gap-x-5">
+              <div class="w-[72px] lg:w-24 h-[72px] lg:h-24 rounded-2xl bg-white flex flex-col items-center justify-end gap-2 p-1">
+                <img src="public/images/Discovery.svg" alt="" class="w-8 lg:w-10 h-8 lg:h-10" />
+                <span class="text-xs lg:text-sm text-emerald-600">چرخ و بخت</span>
+              </div>
+              <div class="w-[72px] lg:w-24 h-[72px] lg:h-24 rounded-2xl bg-white flex flex-col items-center justify-end gap-2 p-1">
+                <img src="public/images/Activity.svg" alt="" class="w-8 lg:w-10 h-8 lg:h-10" />
+                <span class="text-xs lg:text-sm text-emerald-600">ماموریت ها</span>
+              </div>
+              <div class="w-[72px] lg:w-24 h-[72px] lg:h-24 rounded-2xl bg-white flex flex-col items-center justify-end gap-2 p-1">
+                <img src="public/images/Ticket-Star.svg" alt="" class="w-8 lg:w-10 h-8 lg:h-10" />
+                <span class="text-xs lg:text-sm text-emerald-600">جایزه ها</span>
+              </div>
+            </div>
+
+            <div class="hidden xs:flex flex-col gap-y-1 lg:gap-y-2 items-center">
+              <h3 class="font-DanaMedium text-2xl lg:text-3xl leading-[34.32px] text-white">542</h3>
+              <span class="text-xs lg:text-sm leading-[17.16px] lg:leading-[20px] text-white">امتیـــــــاز شما</span>
+              <a href="" class="font-DanaMedium text-xs lg:text-sm leading-[20px] text-white flex items-center gap-x-2 rounded-[100px] bg-gradient-to-r from-orange-200 to-orange-300 px-[6px] lg:px-2.5 py-1 lg:py-2">
+                <span class="m-0 p-0">دریافت جایزه </span>
+                <svg class="w-3 h-3">
+                  <use href="#chevron-left"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- section blog -->
+      <section class="max-w-[1920px] mx-auto">
+        <div class="container pt-8 lg:pt-20 flex flex-col gap-y-5 lg:gap-y-12">
+          <div class="flex items-center justify-between">
+            <h2 class="font-MorabaMedium text-2xl lg:text-5xl text-zinc-700 dark:text-white leading-[32px] lg:leading-[48px] transition-colors">مطالب خواندنی</h2>
+            <a href="" class="text-base lg:text-xl tracking-tighter leading-[28px] flex items-center gap-x-1 text-orange-300 transition-colors px-3 py-[6px] rounded-md hover:bg-orange-200/20">
+              مشاهده همه <span class="hidden lg:block">مطالب</span>
+              <svg class="w-5 h-5">
+                <use href="#chevron-left"></use>
+              </svg>
+            </a>
+          </div>
+
+          <!-- article container -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+            <div class="flex flex-row lg:flex-col p-2.5 rounded-2xl bg-white dark:bg-zinc-700 shadow gap-y-4 gap-x-2.5 transition-colors group">
+              <!-- article header -->
+              <div class="w-[36%] lg:w-full aspect-square lg:aspect-auto">
+                <a href="" class="rounded-blogImage relative">
+                  <span class="rounded-blogImage w-full h-full lg:w-full flex items-center justify-center bg-socialLinkHover  invisible opacity-0 group-hover:visible group-hover:opacity-80  absolute right-0 top-0 transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="40" viewBox="0 0 100 40" fill="none" class="w-28">
+                      <path d="M7.22937 0.610531C4.44214 1.47319 2.66845 3.11226 1.2326 6.17471C-1.55463 12.1271 0.514679 18.0795 6.13137 20.2361C8.49629 21.0988 14.7887 21.487 15.8867 20.7537C16.1401 20.5812 16.3934 18.9421 16.4779 16.8717C16.6468 12.5584 16.4779 12.3859 12.5504 12.5584C9.76321 12.6878 9.00306 13.3348 10.6923 14.1112C11.917 14.6719 12.4237 16.2247 12.0437 17.9069C11.7903 18.8559 11.5791 18.9853 10.6078 18.7265C7.35606 17.9069 6.13137 15.7934 6.13137 10.9625C6.08914 8.11571 6.30029 7.20991 7.10267 5.74338C9.00306 2.29272 5.28675 2.55152 53.2186 2.55152C83.9626 2.55152 96.1251 2.68092 96.5474 3.02599C97.1808 3.58672 97.3498 13.3348 96.7163 13.3348C96.5051 13.3348 94.9848 11.4801 93.3378 9.23717L90.3395 5.13951H87.8056C86.412 5.13951 85.2718 5.22578 85.2718 5.35518C85.2718 5.48458 85.5674 6.04531 85.9475 6.60604C86.4542 7.46871 86.5387 8.71957 86.412 13.4211C86.3275 16.5698 86.1164 19.5891 85.9475 20.1499C85.6096 21.0988 85.6518 21.1419 87.2144 21.0125L88.8614 20.8831L88.9881 16.4404C89.0303 14.025 89.2837 12.0408 89.4948 12.0408C89.6638 12.0408 91.0996 13.9818 92.6199 16.3541C95.4494 20.7969 96.1251 21.3145 98.6167 21.0125L99.8414 20.8831L99.9681 11.8683C100.095 1.68886 99.9681 1.2144 97.2231 0.437998C96.1673 0.136066 81.1754 -0.0364666 52.3318 0.00666618C17.4492 0.00666618 8.70744 0.136066 7.22937 0.610531Z" fill="#78350F"/>
+                      <path d="M24.0797 5.13955C22.1371 5.61401 19.3921 7.64127 18.3785 9.40973C17.8718 10.3587 17.5762 11.6958 17.5339 13.3349C17.4917 15.4052 17.7029 16.0522 18.7164 17.3894C20.2789 19.4598 21.9682 20.5381 24.8398 21.142C29.3585 22.0909 34.384 20.193 36.1577 16.8718C39.5784 10.5312 35.3553 4.57882 27.5426 4.75135C26.4446 4.79448 24.8821 4.96702 24.0797 5.13955ZM29.5697 7.85694C29.9498 8.15887 30.6677 9.06467 31.1745 9.8842C34.0461 14.7151 29.1896 21.2714 25.1355 18.0364C22.1371 15.6209 21.9259 11.0057 24.7132 8.37454C25.9801 7.16681 28.3872 6.95114 29.5697 7.85694Z" fill="#78350F"/>
+                      <path d="M52.9652 12.9466V21.1851L58.2441 21.0125C64.3253 20.7969 66.3524 20.0636 68.1683 17.3462C69.5197 15.2758 69.6463 11.2644 68.4217 9.19403C66.4368 5.87278 63.4807 4.75132 56.9771 4.70818H52.9652V12.9466ZM62.7205 8.7627C64.0297 10.0998 64.1564 10.488 64.1564 12.6447C64.1564 16.6561 62.7627 18.5108 59.7644 18.5108H58.2441V13.2054C58.2441 10.2724 58.3707 7.72751 58.5397 7.59811C59.2998 6.77858 61.3691 7.38244 62.7205 8.7627Z" fill="#78350F"/>
+                      <path d="M71.2508 12.3426C71.3353 16.5696 71.462 20.2791 71.5465 20.5379C71.6731 20.9692 73.2357 21.0986 77.4165 21.0986C82.8221 21.0986 83.1599 21.0555 83.7511 20.1497C84.6802 18.7694 84.638 17.4323 83.7089 17.9068C83.2866 18.1224 81.6396 18.295 79.9926 18.295H77.0364V16.1383V13.9817L79.0213 13.8523C80.4994 13.766 81.2173 13.4641 81.6818 12.7739C82.0197 12.2563 82.3153 11.6956 82.3153 11.5231C82.3153 11.3505 81.1328 11.178 79.697 11.0917L77.0364 10.9623L76.9098 9.40954C76.7408 7.20975 77.501 6.64902 80.0771 7.25288C81.8085 7.64108 82.1886 7.59795 82.6531 6.99408C82.9065 6.60588 83.1599 5.91575 83.1599 5.48442C83.1599 4.75116 82.6531 4.70802 77.1631 4.70802H71.1241L71.2508 12.3426Z" fill="#78350F"/>
+                      <path d="M39.1559 12.5583C39.2403 16.8284 39.4937 20.236 39.7471 20.5379C40.0427 20.9261 41.6052 21.0986 44.6881 21.0986C49.4602 21.0986 50.347 20.7967 50.7271 19.1145C50.9382 18.2087 50.8115 18.1656 47.9399 18.2518L44.9415 18.295V11.6956V5.13935H41.9853H39.0292L39.1559 12.5583Z" fill="#78350F"/>
+                      <path d="M4.31542 24.2908C2.11942 25.3691 0.683576 27.0513 0.134577 29.208C-0.287731 30.847 0.387961 34.7721 1.35927 36.2387C3.13296 38.9129 7.65165 40.25 13.0572 39.7756C15.5066 39.5168 15.6755 39.4736 16.2667 38.0071C16.6046 37.1876 16.7735 36.4112 16.689 36.2818C16.5623 36.1955 15.591 36.4112 14.493 36.7994C12.0436 37.6621 10.3966 37.6621 8.91857 36.8857C6.25803 35.4623 4.94888 32.788 5.54011 30.0275C6.46919 25.671 9.08749 24.5496 13.6062 26.4906C14.2819 26.7925 14.3663 26.62 14.2396 25.1534L14.1129 23.4712L10.3122 23.3418C7.01819 23.2556 6.2158 23.385 4.31542 24.2908Z" fill="#78350F"/>
+                      <path d="M24.9239 23.9024C20.363 25.1964 17.7447 28.7333 18.2515 33.0035C18.7583 37.6187 23.108 40.4224 29.2315 39.9479C35.735 39.5166 39.7047 33.823 37.382 28.302C35.7772 24.42 30.1183 22.4359 24.9239 23.9024ZM31.0896 27.353C32.5255 29.0352 33.0745 31.3644 32.5255 33.4779C31.0896 38.9559 25.2196 38.8265 23.5726 33.2192C22.0945 28.1726 27.8801 23.6436 31.0896 27.353Z" fill="#78350F"/>
+                      <path d="M40.0431 23.5574C40.0008 23.7731 40.0431 24.075 40.1275 24.3338C40.212 24.5495 40.3809 28.0432 40.5076 32.0978L40.7187 39.4304L43.4637 39.5598L46.251 39.6892L46.2087 36.1092V32.5291L48.4047 32.3997C50.6852 32.2703 51.7832 31.4939 51.3187 30.3724C51.1497 29.898 50.4318 29.7254 48.5314 29.7254H45.9976V27.8276C45.9976 25.4984 46.6311 25.1533 49.6294 25.8435C51.4454 26.2748 51.741 26.2317 52.2477 25.5415C52.5434 25.1102 52.7123 24.5063 52.67 24.1181C52.5434 23.6005 51.4876 23.4711 46.2932 23.3417C42.8725 23.2986 40.0431 23.3849 40.0431 23.5574Z" fill="#78350F"/>
+                      <path d="M55.2453 23.5574C55.2031 23.7731 55.2453 24.075 55.3298 24.3338C55.4143 24.5495 55.5832 28.0432 55.7099 32.0978L55.921 39.4304L58.666 39.5598L61.4532 39.6892L61.411 36.1092V32.5291L63.607 32.3997C65.8875 32.2703 66.9855 31.4939 66.5209 30.3724C66.352 29.898 65.6341 29.7254 63.7337 29.7254H61.1999V27.8276C61.1999 25.4984 61.8333 25.1533 64.8317 25.8435C66.6476 26.2748 66.9432 26.2317 67.45 25.5415C67.7456 25.1102 67.9145 24.5063 67.8723 24.1181C67.7456 23.6005 66.6899 23.4711 61.4955 23.3417C58.0748 23.2986 55.2453 23.3849 55.2453 23.5574Z" fill="#78350F"/>
+                      <path d="M70.4486 23.5576C70.4064 23.7732 70.4486 24.0752 70.4909 24.334C70.5753 24.5496 70.5753 27.8709 70.5753 31.6235C70.5331 36.0231 70.702 38.7404 70.9976 39.0855C71.3355 39.5168 72.9403 39.6462 77.0789 39.6462H82.7378L83.4557 38.1366C84.3426 36.2819 84.0469 35.9368 82.3155 36.8426C81.4709 37.2739 80.2462 37.4896 78.8103 37.4033L76.6143 37.2739L76.4876 34.7722L76.3609 32.3136H78.4303C80.584 32.3136 81.4709 31.796 81.4709 30.502C81.4709 29.855 81.0908 29.7256 78.8948 29.7256H76.3609L76.4876 27.6552C76.6143 25.4123 76.8677 25.2829 80.2884 25.973C81.6398 26.275 81.9354 26.1887 82.3155 25.4123C83.329 23.4713 82.78 23.2556 76.4032 23.2556C73.1514 23.2556 70.4486 23.385 70.4486 23.5576Z" fill="#78350F"/>
+                      <path d="M86.4542 30.4589C86.4964 34.4703 86.6654 38.1366 86.7498 38.6542C86.961 39.6462 87.0877 39.6462 92.9155 39.6462H98.8278L99.4613 38.1366C100.264 36.1093 100.264 36.1093 98.5322 36.8426C96.674 37.619 93.1267 37.7052 92.5777 36.9288C92.3665 36.6701 92.2398 35.7211 92.282 34.9016C92.3243 34.0821 92.4087 33.1331 92.4087 32.8312C92.451 32.4861 93.1689 32.3136 94.5203 32.3136C96.674 32.3136 97.8143 31.5372 97.392 30.4157C97.223 29.9844 96.3784 29.7256 94.6892 29.6393L92.2398 29.5099L92.1131 27.9571C91.9442 25.7142 92.7044 25.1966 95.4494 25.8005C97.392 26.2318 97.6876 26.1887 98.1944 25.5417C98.5322 25.1104 98.7434 24.4634 98.6589 24.1183C98.5744 23.6007 97.4764 23.4713 92.451 23.3419L86.3275 23.2125L86.4542 30.4589Z" fill="#78350F"/>
+                      </svg>
+                  </span>
+                  <img src="public/images/blog-1.png" alt="" class="rounded-blogImage w-full h-full lg:w-full object-cover" />
+                </a>
+              </div>
+              <!-- article body -->
+              <div class="flex flex-grow flex-col lg:flex-row lg:items-center justify-between py-2.5 lg:py-0 gap-y-5">
+                <a href="" class="font-DanaMedium lg:font-DanaRegular font-[500] lg:font-[400] text-sm lg:text-lg leading-7 text-zinc-700 dark:text-white line-clamp-2 ml-0 lg:ml-5 transition-colors">طرز تهیه قهوه دمی با دستگاه اروپرس خط دوم اسم طولانی</a>
+                <span class="w-full h-px bg-white/10 lg:hidden"></span>
+                <div class="w-full flex flex-row lg:flex-col items-center justify-between lg:w-1/4 lg:px-5 lg:border-r lg:dark:border-white/10 lg:border-gray-100 transition-colors">
+                  <div class="flex items-center flex-row lg:flex-col text-emerald-500">
+                    <h3 class="font-DanaRegular text-xs leading-4 lg:font-DanaDemiBold lg:text-2xl lg:leading-8 text-center lg:font-[600]">21</h3>
+                    <span class="text-xs leading-4 lg:text-sm lg:leading-5">مرداد</span>
+                    <span class="text-xs leading-4 lg:text-sm lg:leading-5">1402</span>
+                  </div>
+                  <a href="" class="flex items-center gap-x-1 px-2.5 py-0.5 text-xs font-DanaMedium text-orange-300 bg-orange-200/20 rounded-md lg:hidden"
+                    >مطالعه
+                    <svg class="w-2.5 h-2.5">
+                      <use href="#chevron-left"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-row lg:flex-col p-2.5 rounded-2xl bg-white dark:bg-zinc-700 shadow gap-y-4 gap-x-2.5 transition-colors group">
+              <!-- article header -->
+              <div class="w-[36%] lg:w-full aspect-square lg:aspect-auto">
+                <a href="" class="rounded-blogImage relative">
+                  <span class="rounded-blogImage w-full h-full lg:w-full flex items-center justify-center bg-socialLinkHover  invisible opacity-0 group-hover:visible group-hover:opacity-80  absolute right-0 top-0 transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="40" viewBox="0 0 100 40" fill="none" class="w-28">
+                      <path d="M7.22937 0.610531C4.44214 1.47319 2.66845 3.11226 1.2326 6.17471C-1.55463 12.1271 0.514679 18.0795 6.13137 20.2361C8.49629 21.0988 14.7887 21.487 15.8867 20.7537C16.1401 20.5812 16.3934 18.9421 16.4779 16.8717C16.6468 12.5584 16.4779 12.3859 12.5504 12.5584C9.76321 12.6878 9.00306 13.3348 10.6923 14.1112C11.917 14.6719 12.4237 16.2247 12.0437 17.9069C11.7903 18.8559 11.5791 18.9853 10.6078 18.7265C7.35606 17.9069 6.13137 15.7934 6.13137 10.9625C6.08914 8.11571 6.30029 7.20991 7.10267 5.74338C9.00306 2.29272 5.28675 2.55152 53.2186 2.55152C83.9626 2.55152 96.1251 2.68092 96.5474 3.02599C97.1808 3.58672 97.3498 13.3348 96.7163 13.3348C96.5051 13.3348 94.9848 11.4801 93.3378 9.23717L90.3395 5.13951H87.8056C86.412 5.13951 85.2718 5.22578 85.2718 5.35518C85.2718 5.48458 85.5674 6.04531 85.9475 6.60604C86.4542 7.46871 86.5387 8.71957 86.412 13.4211C86.3275 16.5698 86.1164 19.5891 85.9475 20.1499C85.6096 21.0988 85.6518 21.1419 87.2144 21.0125L88.8614 20.8831L88.9881 16.4404C89.0303 14.025 89.2837 12.0408 89.4948 12.0408C89.6638 12.0408 91.0996 13.9818 92.6199 16.3541C95.4494 20.7969 96.1251 21.3145 98.6167 21.0125L99.8414 20.8831L99.9681 11.8683C100.095 1.68886 99.9681 1.2144 97.2231 0.437998C96.1673 0.136066 81.1754 -0.0364666 52.3318 0.00666618C17.4492 0.00666618 8.70744 0.136066 7.22937 0.610531Z" fill="#78350F"/>
+                      <path d="M24.0797 5.13955C22.1371 5.61401 19.3921 7.64127 18.3785 9.40973C17.8718 10.3587 17.5762 11.6958 17.5339 13.3349C17.4917 15.4052 17.7029 16.0522 18.7164 17.3894C20.2789 19.4598 21.9682 20.5381 24.8398 21.142C29.3585 22.0909 34.384 20.193 36.1577 16.8718C39.5784 10.5312 35.3553 4.57882 27.5426 4.75135C26.4446 4.79448 24.8821 4.96702 24.0797 5.13955ZM29.5697 7.85694C29.9498 8.15887 30.6677 9.06467 31.1745 9.8842C34.0461 14.7151 29.1896 21.2714 25.1355 18.0364C22.1371 15.6209 21.9259 11.0057 24.7132 8.37454C25.9801 7.16681 28.3872 6.95114 29.5697 7.85694Z" fill="#78350F"/>
+                      <path d="M52.9652 12.9466V21.1851L58.2441 21.0125C64.3253 20.7969 66.3524 20.0636 68.1683 17.3462C69.5197 15.2758 69.6463 11.2644 68.4217 9.19403C66.4368 5.87278 63.4807 4.75132 56.9771 4.70818H52.9652V12.9466ZM62.7205 8.7627C64.0297 10.0998 64.1564 10.488 64.1564 12.6447C64.1564 16.6561 62.7627 18.5108 59.7644 18.5108H58.2441V13.2054C58.2441 10.2724 58.3707 7.72751 58.5397 7.59811C59.2998 6.77858 61.3691 7.38244 62.7205 8.7627Z" fill="#78350F"/>
+                      <path d="M71.2508 12.3426C71.3353 16.5696 71.462 20.2791 71.5465 20.5379C71.6731 20.9692 73.2357 21.0986 77.4165 21.0986C82.8221 21.0986 83.1599 21.0555 83.7511 20.1497C84.6802 18.7694 84.638 17.4323 83.7089 17.9068C83.2866 18.1224 81.6396 18.295 79.9926 18.295H77.0364V16.1383V13.9817L79.0213 13.8523C80.4994 13.766 81.2173 13.4641 81.6818 12.7739C82.0197 12.2563 82.3153 11.6956 82.3153 11.5231C82.3153 11.3505 81.1328 11.178 79.697 11.0917L77.0364 10.9623L76.9098 9.40954C76.7408 7.20975 77.501 6.64902 80.0771 7.25288C81.8085 7.64108 82.1886 7.59795 82.6531 6.99408C82.9065 6.60588 83.1599 5.91575 83.1599 5.48442C83.1599 4.75116 82.6531 4.70802 77.1631 4.70802H71.1241L71.2508 12.3426Z" fill="#78350F"/>
+                      <path d="M39.1559 12.5583C39.2403 16.8284 39.4937 20.236 39.7471 20.5379C40.0427 20.9261 41.6052 21.0986 44.6881 21.0986C49.4602 21.0986 50.347 20.7967 50.7271 19.1145C50.9382 18.2087 50.8115 18.1656 47.9399 18.2518L44.9415 18.295V11.6956V5.13935H41.9853H39.0292L39.1559 12.5583Z" fill="#78350F"/>
+                      <path d="M4.31542 24.2908C2.11942 25.3691 0.683576 27.0513 0.134577 29.208C-0.287731 30.847 0.387961 34.7721 1.35927 36.2387C3.13296 38.9129 7.65165 40.25 13.0572 39.7756C15.5066 39.5168 15.6755 39.4736 16.2667 38.0071C16.6046 37.1876 16.7735 36.4112 16.689 36.2818C16.5623 36.1955 15.591 36.4112 14.493 36.7994C12.0436 37.6621 10.3966 37.6621 8.91857 36.8857C6.25803 35.4623 4.94888 32.788 5.54011 30.0275C6.46919 25.671 9.08749 24.5496 13.6062 26.4906C14.2819 26.7925 14.3663 26.62 14.2396 25.1534L14.1129 23.4712L10.3122 23.3418C7.01819 23.2556 6.2158 23.385 4.31542 24.2908Z" fill="#78350F"/>
+                      <path d="M24.9239 23.9024C20.363 25.1964 17.7447 28.7333 18.2515 33.0035C18.7583 37.6187 23.108 40.4224 29.2315 39.9479C35.735 39.5166 39.7047 33.823 37.382 28.302C35.7772 24.42 30.1183 22.4359 24.9239 23.9024ZM31.0896 27.353C32.5255 29.0352 33.0745 31.3644 32.5255 33.4779C31.0896 38.9559 25.2196 38.8265 23.5726 33.2192C22.0945 28.1726 27.8801 23.6436 31.0896 27.353Z" fill="#78350F"/>
+                      <path d="M40.0431 23.5574C40.0008 23.7731 40.0431 24.075 40.1275 24.3338C40.212 24.5495 40.3809 28.0432 40.5076 32.0978L40.7187 39.4304L43.4637 39.5598L46.251 39.6892L46.2087 36.1092V32.5291L48.4047 32.3997C50.6852 32.2703 51.7832 31.4939 51.3187 30.3724C51.1497 29.898 50.4318 29.7254 48.5314 29.7254H45.9976V27.8276C45.9976 25.4984 46.6311 25.1533 49.6294 25.8435C51.4454 26.2748 51.741 26.2317 52.2477 25.5415C52.5434 25.1102 52.7123 24.5063 52.67 24.1181C52.5434 23.6005 51.4876 23.4711 46.2932 23.3417C42.8725 23.2986 40.0431 23.3849 40.0431 23.5574Z" fill="#78350F"/>
+                      <path d="M55.2453 23.5574C55.2031 23.7731 55.2453 24.075 55.3298 24.3338C55.4143 24.5495 55.5832 28.0432 55.7099 32.0978L55.921 39.4304L58.666 39.5598L61.4532 39.6892L61.411 36.1092V32.5291L63.607 32.3997C65.8875 32.2703 66.9855 31.4939 66.5209 30.3724C66.352 29.898 65.6341 29.7254 63.7337 29.7254H61.1999V27.8276C61.1999 25.4984 61.8333 25.1533 64.8317 25.8435C66.6476 26.2748 66.9432 26.2317 67.45 25.5415C67.7456 25.1102 67.9145 24.5063 67.8723 24.1181C67.7456 23.6005 66.6899 23.4711 61.4955 23.3417C58.0748 23.2986 55.2453 23.3849 55.2453 23.5574Z" fill="#78350F"/>
+                      <path d="M70.4486 23.5576C70.4064 23.7732 70.4486 24.0752 70.4909 24.334C70.5753 24.5496 70.5753 27.8709 70.5753 31.6235C70.5331 36.0231 70.702 38.7404 70.9976 39.0855C71.3355 39.5168 72.9403 39.6462 77.0789 39.6462H82.7378L83.4557 38.1366C84.3426 36.2819 84.0469 35.9368 82.3155 36.8426C81.4709 37.2739 80.2462 37.4896 78.8103 37.4033L76.6143 37.2739L76.4876 34.7722L76.3609 32.3136H78.4303C80.584 32.3136 81.4709 31.796 81.4709 30.502C81.4709 29.855 81.0908 29.7256 78.8948 29.7256H76.3609L76.4876 27.6552C76.6143 25.4123 76.8677 25.2829 80.2884 25.973C81.6398 26.275 81.9354 26.1887 82.3155 25.4123C83.329 23.4713 82.78 23.2556 76.4032 23.2556C73.1514 23.2556 70.4486 23.385 70.4486 23.5576Z" fill="#78350F"/>
+                      <path d="M86.4542 30.4589C86.4964 34.4703 86.6654 38.1366 86.7498 38.6542C86.961 39.6462 87.0877 39.6462 92.9155 39.6462H98.8278L99.4613 38.1366C100.264 36.1093 100.264 36.1093 98.5322 36.8426C96.674 37.619 93.1267 37.7052 92.5777 36.9288C92.3665 36.6701 92.2398 35.7211 92.282 34.9016C92.3243 34.0821 92.4087 33.1331 92.4087 32.8312C92.451 32.4861 93.1689 32.3136 94.5203 32.3136C96.674 32.3136 97.8143 31.5372 97.392 30.4157C97.223 29.9844 96.3784 29.7256 94.6892 29.6393L92.2398 29.5099L92.1131 27.9571C91.9442 25.7142 92.7044 25.1966 95.4494 25.8005C97.392 26.2318 97.6876 26.1887 98.1944 25.5417C98.5322 25.1104 98.7434 24.4634 98.6589 24.1183C98.5744 23.6007 97.4764 23.4713 92.451 23.3419L86.3275 23.2125L86.4542 30.4589Z" fill="#78350F"/>
+                      </svg>
+                  </span>
+                  <img src="public/images/blog-2.png" alt="" class="rounded-blogImage w-full h-full lg:w-full object-cover" />
+                </a>
+              </div>
+              <!-- article body -->
+              <div class="flex flex-grow flex-col lg:flex-row lg:items-center justify-between py-2.5 lg:py-0 gap-y-5">
+                <a href="" class="font-DanaMedium lg:font-DanaRegular font-[500] lg:font-[400] text-sm lg:text-lg leading-7 text-zinc-700 dark:text-white line-clamp-2 ml-0 lg:ml-5 transition-colors">طرز تهیه قهوه دمی با دستگاه اروپرس خط دوم اسم طولانی</a>
+                <span class="w-full h-px bg-white/10 lg:hidden"></span>
+                <div class="w-full flex flex-row lg:flex-col items-center justify-between lg:w-1/4 lg:px-5 lg:border-r lg:dark:border-white/10 lg:border-gray-100 transition-colors">
+                  <div class="flex items-center flex-row lg:flex-col text-emerald-500">
+                    <h3 class="font-DanaRegular text-xs leading-4 lg:font-DanaDemiBold lg:text-2xl lg:leading-8 text-center lg:font-[600]">21</h3>
+                    <span class="text-xs leading-4 lg:text-sm lg:leading-5">مرداد</span>
+                    <span class="text-xs leading-4 lg:text-sm lg:leading-5">1402</span>
+                  </div>
+                  <a href="" class="flex items-center gap-x-1 px-2.5 py-0.5 text-xs font-DanaMedium text-orange-300 bg-orange-200/20 rounded-md lg:hidden"
+                    >مطالعه
+                    <svg class="w-2.5 h-2.5">
+                      <use href="#chevron-left"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-row lg:flex-col p-2.5 rounded-2xl bg-white dark:bg-zinc-700 shadow gap-y-4 gap-x-2.5 transition-colors group">
+              <!-- article header -->
+              <div class="w-[36%] lg:w-full aspect-square lg:aspect-auto">
+                <a href="" class="rounded-blogImage relative">
+                  <span class="rounded-blogImage w-full h-full lg:w-full flex items-center justify-center bg-socialLinkHover  invisible opacity-0 group-hover:visible group-hover:opacity-80  absolute right-0 top-0 transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="40" viewBox="0 0 100 40" fill="none" class="w-28">
+                      <path d="M7.22937 0.610531C4.44214 1.47319 2.66845 3.11226 1.2326 6.17471C-1.55463 12.1271 0.514679 18.0795 6.13137 20.2361C8.49629 21.0988 14.7887 21.487 15.8867 20.7537C16.1401 20.5812 16.3934 18.9421 16.4779 16.8717C16.6468 12.5584 16.4779 12.3859 12.5504 12.5584C9.76321 12.6878 9.00306 13.3348 10.6923 14.1112C11.917 14.6719 12.4237 16.2247 12.0437 17.9069C11.7903 18.8559 11.5791 18.9853 10.6078 18.7265C7.35606 17.9069 6.13137 15.7934 6.13137 10.9625C6.08914 8.11571 6.30029 7.20991 7.10267 5.74338C9.00306 2.29272 5.28675 2.55152 53.2186 2.55152C83.9626 2.55152 96.1251 2.68092 96.5474 3.02599C97.1808 3.58672 97.3498 13.3348 96.7163 13.3348C96.5051 13.3348 94.9848 11.4801 93.3378 9.23717L90.3395 5.13951H87.8056C86.412 5.13951 85.2718 5.22578 85.2718 5.35518C85.2718 5.48458 85.5674 6.04531 85.9475 6.60604C86.4542 7.46871 86.5387 8.71957 86.412 13.4211C86.3275 16.5698 86.1164 19.5891 85.9475 20.1499C85.6096 21.0988 85.6518 21.1419 87.2144 21.0125L88.8614 20.8831L88.9881 16.4404C89.0303 14.025 89.2837 12.0408 89.4948 12.0408C89.6638 12.0408 91.0996 13.9818 92.6199 16.3541C95.4494 20.7969 96.1251 21.3145 98.6167 21.0125L99.8414 20.8831L99.9681 11.8683C100.095 1.68886 99.9681 1.2144 97.2231 0.437998C96.1673 0.136066 81.1754 -0.0364666 52.3318 0.00666618C17.4492 0.00666618 8.70744 0.136066 7.22937 0.610531Z" fill="#78350F"/>
+                      <path d="M24.0797 5.13955C22.1371 5.61401 19.3921 7.64127 18.3785 9.40973C17.8718 10.3587 17.5762 11.6958 17.5339 13.3349C17.4917 15.4052 17.7029 16.0522 18.7164 17.3894C20.2789 19.4598 21.9682 20.5381 24.8398 21.142C29.3585 22.0909 34.384 20.193 36.1577 16.8718C39.5784 10.5312 35.3553 4.57882 27.5426 4.75135C26.4446 4.79448 24.8821 4.96702 24.0797 5.13955ZM29.5697 7.85694C29.9498 8.15887 30.6677 9.06467 31.1745 9.8842C34.0461 14.7151 29.1896 21.2714 25.1355 18.0364C22.1371 15.6209 21.9259 11.0057 24.7132 8.37454C25.9801 7.16681 28.3872 6.95114 29.5697 7.85694Z" fill="#78350F"/>
+                      <path d="M52.9652 12.9466V21.1851L58.2441 21.0125C64.3253 20.7969 66.3524 20.0636 68.1683 17.3462C69.5197 15.2758 69.6463 11.2644 68.4217 9.19403C66.4368 5.87278 63.4807 4.75132 56.9771 4.70818H52.9652V12.9466ZM62.7205 8.7627C64.0297 10.0998 64.1564 10.488 64.1564 12.6447C64.1564 16.6561 62.7627 18.5108 59.7644 18.5108H58.2441V13.2054C58.2441 10.2724 58.3707 7.72751 58.5397 7.59811C59.2998 6.77858 61.3691 7.38244 62.7205 8.7627Z" fill="#78350F"/>
+                      <path d="M71.2508 12.3426C71.3353 16.5696 71.462 20.2791 71.5465 20.5379C71.6731 20.9692 73.2357 21.0986 77.4165 21.0986C82.8221 21.0986 83.1599 21.0555 83.7511 20.1497C84.6802 18.7694 84.638 17.4323 83.7089 17.9068C83.2866 18.1224 81.6396 18.295 79.9926 18.295H77.0364V16.1383V13.9817L79.0213 13.8523C80.4994 13.766 81.2173 13.4641 81.6818 12.7739C82.0197 12.2563 82.3153 11.6956 82.3153 11.5231C82.3153 11.3505 81.1328 11.178 79.697 11.0917L77.0364 10.9623L76.9098 9.40954C76.7408 7.20975 77.501 6.64902 80.0771 7.25288C81.8085 7.64108 82.1886 7.59795 82.6531 6.99408C82.9065 6.60588 83.1599 5.91575 83.1599 5.48442C83.1599 4.75116 82.6531 4.70802 77.1631 4.70802H71.1241L71.2508 12.3426Z" fill="#78350F"/>
+                      <path d="M39.1559 12.5583C39.2403 16.8284 39.4937 20.236 39.7471 20.5379C40.0427 20.9261 41.6052 21.0986 44.6881 21.0986C49.4602 21.0986 50.347 20.7967 50.7271 19.1145C50.9382 18.2087 50.8115 18.1656 47.9399 18.2518L44.9415 18.295V11.6956V5.13935H41.9853H39.0292L39.1559 12.5583Z" fill="#78350F"/>
+                      <path d="M4.31542 24.2908C2.11942 25.3691 0.683576 27.0513 0.134577 29.208C-0.287731 30.847 0.387961 34.7721 1.35927 36.2387C3.13296 38.9129 7.65165 40.25 13.0572 39.7756C15.5066 39.5168 15.6755 39.4736 16.2667 38.0071C16.6046 37.1876 16.7735 36.4112 16.689 36.2818C16.5623 36.1955 15.591 36.4112 14.493 36.7994C12.0436 37.6621 10.3966 37.6621 8.91857 36.8857C6.25803 35.4623 4.94888 32.788 5.54011 30.0275C6.46919 25.671 9.08749 24.5496 13.6062 26.4906C14.2819 26.7925 14.3663 26.62 14.2396 25.1534L14.1129 23.4712L10.3122 23.3418C7.01819 23.2556 6.2158 23.385 4.31542 24.2908Z" fill="#78350F"/>
+                      <path d="M24.9239 23.9024C20.363 25.1964 17.7447 28.7333 18.2515 33.0035C18.7583 37.6187 23.108 40.4224 29.2315 39.9479C35.735 39.5166 39.7047 33.823 37.382 28.302C35.7772 24.42 30.1183 22.4359 24.9239 23.9024ZM31.0896 27.353C32.5255 29.0352 33.0745 31.3644 32.5255 33.4779C31.0896 38.9559 25.2196 38.8265 23.5726 33.2192C22.0945 28.1726 27.8801 23.6436 31.0896 27.353Z" fill="#78350F"/>
+                      <path d="M40.0431 23.5574C40.0008 23.7731 40.0431 24.075 40.1275 24.3338C40.212 24.5495 40.3809 28.0432 40.5076 32.0978L40.7187 39.4304L43.4637 39.5598L46.251 39.6892L46.2087 36.1092V32.5291L48.4047 32.3997C50.6852 32.2703 51.7832 31.4939 51.3187 30.3724C51.1497 29.898 50.4318 29.7254 48.5314 29.7254H45.9976V27.8276C45.9976 25.4984 46.6311 25.1533 49.6294 25.8435C51.4454 26.2748 51.741 26.2317 52.2477 25.5415C52.5434 25.1102 52.7123 24.5063 52.67 24.1181C52.5434 23.6005 51.4876 23.4711 46.2932 23.3417C42.8725 23.2986 40.0431 23.3849 40.0431 23.5574Z" fill="#78350F"/>
+                      <path d="M55.2453 23.5574C55.2031 23.7731 55.2453 24.075 55.3298 24.3338C55.4143 24.5495 55.5832 28.0432 55.7099 32.0978L55.921 39.4304L58.666 39.5598L61.4532 39.6892L61.411 36.1092V32.5291L63.607 32.3997C65.8875 32.2703 66.9855 31.4939 66.5209 30.3724C66.352 29.898 65.6341 29.7254 63.7337 29.7254H61.1999V27.8276C61.1999 25.4984 61.8333 25.1533 64.8317 25.8435C66.6476 26.2748 66.9432 26.2317 67.45 25.5415C67.7456 25.1102 67.9145 24.5063 67.8723 24.1181C67.7456 23.6005 66.6899 23.4711 61.4955 23.3417C58.0748 23.2986 55.2453 23.3849 55.2453 23.5574Z" fill="#78350F"/>
+                      <path d="M70.4486 23.5576C70.4064 23.7732 70.4486 24.0752 70.4909 24.334C70.5753 24.5496 70.5753 27.8709 70.5753 31.6235C70.5331 36.0231 70.702 38.7404 70.9976 39.0855C71.3355 39.5168 72.9403 39.6462 77.0789 39.6462H82.7378L83.4557 38.1366C84.3426 36.2819 84.0469 35.9368 82.3155 36.8426C81.4709 37.2739 80.2462 37.4896 78.8103 37.4033L76.6143 37.2739L76.4876 34.7722L76.3609 32.3136H78.4303C80.584 32.3136 81.4709 31.796 81.4709 30.502C81.4709 29.855 81.0908 29.7256 78.8948 29.7256H76.3609L76.4876 27.6552C76.6143 25.4123 76.8677 25.2829 80.2884 25.973C81.6398 26.275 81.9354 26.1887 82.3155 25.4123C83.329 23.4713 82.78 23.2556 76.4032 23.2556C73.1514 23.2556 70.4486 23.385 70.4486 23.5576Z" fill="#78350F"/>
+                      <path d="M86.4542 30.4589C86.4964 34.4703 86.6654 38.1366 86.7498 38.6542C86.961 39.6462 87.0877 39.6462 92.9155 39.6462H98.8278L99.4613 38.1366C100.264 36.1093 100.264 36.1093 98.5322 36.8426C96.674 37.619 93.1267 37.7052 92.5777 36.9288C92.3665 36.6701 92.2398 35.7211 92.282 34.9016C92.3243 34.0821 92.4087 33.1331 92.4087 32.8312C92.451 32.4861 93.1689 32.3136 94.5203 32.3136C96.674 32.3136 97.8143 31.5372 97.392 30.4157C97.223 29.9844 96.3784 29.7256 94.6892 29.6393L92.2398 29.5099L92.1131 27.9571C91.9442 25.7142 92.7044 25.1966 95.4494 25.8005C97.392 26.2318 97.6876 26.1887 98.1944 25.5417C98.5322 25.1104 98.7434 24.4634 98.6589 24.1183C98.5744 23.6007 97.4764 23.4713 92.451 23.3419L86.3275 23.2125L86.4542 30.4589Z" fill="#78350F"/>
+                      </svg>
+                  </span>
+                  <img src="public/images/blog-3.png" alt="" class="rounded-blogImage w-full h-full lg:w-full object-cover" />
+                </a>
+              </div>
+              <!-- article body -->
+              <div class="flex flex-grow flex-col lg:flex-row lg:items-center justify-between py-2.5 lg:py-0 gap-y-5">
+                <a href="" class="font-DanaMedium lg:font-DanaRegular font-[500] lg:font-[400] text-sm lg:text-lg leading-7 text-zinc-700 dark:text-white line-clamp-2 ml-0 lg:ml-5 transition-colors">طرز تهیه قهوه دمی با دستگاه اروپرس خط دوم اسم طولانی</a>
+                <span class="w-full h-px bg-white/10 lg:hidden"></span>
+                <div class="w-full flex flex-row lg:flex-col items-center justify-between lg:w-1/4 lg:px-5 lg:border-r lg:dark:border-white/10 lg:border-gray-100 transition-colors">
+                  <div class="flex items-center flex-row lg:flex-col text-emerald-500">
+                    <h3 class="font-DanaRegular text-xs leading-4 lg:font-DanaDemiBold lg:text-2xl lg:leading-8 text-center lg:font-[600]">21</h3>
+                    <span class="text-xs leading-4 lg:text-sm lg:leading-5">مرداد</span>
+                    <span class="text-xs leading-4 lg:text-sm lg:leading-5">1402</span>
+                  </div>
+                  <a href="" class="flex items-center gap-x-1 px-2.5 py-0.5 text-xs font-DanaMedium text-orange-300 bg-orange-200/20 rounded-md lg:hidden"
+                    >مطالعه
+                    <svg class="w-2.5 h-2.5">
+                      <use href="#chevron-left"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-row lg:flex-col p-2.5 rounded-2xl bg-white dark:bg-zinc-700 shadow gap-y-4 gap-x-2.5 transition-colors group">
+              <!-- article header -->
+              <div class="w-[36%] lg:w-full aspect-square lg:aspect-auto">
+                <a href="" class="rounded-blogImage relative">
+                  <span class="rounded-blogImage w-full h-full lg:w-full flex items-center justify-center bg-socialLinkHover  invisible opacity-0 group-hover:visible group-hover:opacity-80  absolute right-0 top-0 transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="40" viewBox="0 0 100 40" fill="none" class="w-28">
+                      <path d="M7.22937 0.610531C4.44214 1.47319 2.66845 3.11226 1.2326 6.17471C-1.55463 12.1271 0.514679 18.0795 6.13137 20.2361C8.49629 21.0988 14.7887 21.487 15.8867 20.7537C16.1401 20.5812 16.3934 18.9421 16.4779 16.8717C16.6468 12.5584 16.4779 12.3859 12.5504 12.5584C9.76321 12.6878 9.00306 13.3348 10.6923 14.1112C11.917 14.6719 12.4237 16.2247 12.0437 17.9069C11.7903 18.8559 11.5791 18.9853 10.6078 18.7265C7.35606 17.9069 6.13137 15.7934 6.13137 10.9625C6.08914 8.11571 6.30029 7.20991 7.10267 5.74338C9.00306 2.29272 5.28675 2.55152 53.2186 2.55152C83.9626 2.55152 96.1251 2.68092 96.5474 3.02599C97.1808 3.58672 97.3498 13.3348 96.7163 13.3348C96.5051 13.3348 94.9848 11.4801 93.3378 9.23717L90.3395 5.13951H87.8056C86.412 5.13951 85.2718 5.22578 85.2718 5.35518C85.2718 5.48458 85.5674 6.04531 85.9475 6.60604C86.4542 7.46871 86.5387 8.71957 86.412 13.4211C86.3275 16.5698 86.1164 19.5891 85.9475 20.1499C85.6096 21.0988 85.6518 21.1419 87.2144 21.0125L88.8614 20.8831L88.9881 16.4404C89.0303 14.025 89.2837 12.0408 89.4948 12.0408C89.6638 12.0408 91.0996 13.9818 92.6199 16.3541C95.4494 20.7969 96.1251 21.3145 98.6167 21.0125L99.8414 20.8831L99.9681 11.8683C100.095 1.68886 99.9681 1.2144 97.2231 0.437998C96.1673 0.136066 81.1754 -0.0364666 52.3318 0.00666618C17.4492 0.00666618 8.70744 0.136066 7.22937 0.610531Z" fill="#78350F"/>
+                      <path d="M24.0797 5.13955C22.1371 5.61401 19.3921 7.64127 18.3785 9.40973C17.8718 10.3587 17.5762 11.6958 17.5339 13.3349C17.4917 15.4052 17.7029 16.0522 18.7164 17.3894C20.2789 19.4598 21.9682 20.5381 24.8398 21.142C29.3585 22.0909 34.384 20.193 36.1577 16.8718C39.5784 10.5312 35.3553 4.57882 27.5426 4.75135C26.4446 4.79448 24.8821 4.96702 24.0797 5.13955ZM29.5697 7.85694C29.9498 8.15887 30.6677 9.06467 31.1745 9.8842C34.0461 14.7151 29.1896 21.2714 25.1355 18.0364C22.1371 15.6209 21.9259 11.0057 24.7132 8.37454C25.9801 7.16681 28.3872 6.95114 29.5697 7.85694Z" fill="#78350F"/>
+                      <path d="M52.9652 12.9466V21.1851L58.2441 21.0125C64.3253 20.7969 66.3524 20.0636 68.1683 17.3462C69.5197 15.2758 69.6463 11.2644 68.4217 9.19403C66.4368 5.87278 63.4807 4.75132 56.9771 4.70818H52.9652V12.9466ZM62.7205 8.7627C64.0297 10.0998 64.1564 10.488 64.1564 12.6447C64.1564 16.6561 62.7627 18.5108 59.7644 18.5108H58.2441V13.2054C58.2441 10.2724 58.3707 7.72751 58.5397 7.59811C59.2998 6.77858 61.3691 7.38244 62.7205 8.7627Z" fill="#78350F"/>
+                      <path d="M71.2508 12.3426C71.3353 16.5696 71.462 20.2791 71.5465 20.5379C71.6731 20.9692 73.2357 21.0986 77.4165 21.0986C82.8221 21.0986 83.1599 21.0555 83.7511 20.1497C84.6802 18.7694 84.638 17.4323 83.7089 17.9068C83.2866 18.1224 81.6396 18.295 79.9926 18.295H77.0364V16.1383V13.9817L79.0213 13.8523C80.4994 13.766 81.2173 13.4641 81.6818 12.7739C82.0197 12.2563 82.3153 11.6956 82.3153 11.5231C82.3153 11.3505 81.1328 11.178 79.697 11.0917L77.0364 10.9623L76.9098 9.40954C76.7408 7.20975 77.501 6.64902 80.0771 7.25288C81.8085 7.64108 82.1886 7.59795 82.6531 6.99408C82.9065 6.60588 83.1599 5.91575 83.1599 5.48442C83.1599 4.75116 82.6531 4.70802 77.1631 4.70802H71.1241L71.2508 12.3426Z" fill="#78350F"/>
+                      <path d="M39.1559 12.5583C39.2403 16.8284 39.4937 20.236 39.7471 20.5379C40.0427 20.9261 41.6052 21.0986 44.6881 21.0986C49.4602 21.0986 50.347 20.7967 50.7271 19.1145C50.9382 18.2087 50.8115 18.1656 47.9399 18.2518L44.9415 18.295V11.6956V5.13935H41.9853H39.0292L39.1559 12.5583Z" fill="#78350F"/>
+                      <path d="M4.31542 24.2908C2.11942 25.3691 0.683576 27.0513 0.134577 29.208C-0.287731 30.847 0.387961 34.7721 1.35927 36.2387C3.13296 38.9129 7.65165 40.25 13.0572 39.7756C15.5066 39.5168 15.6755 39.4736 16.2667 38.0071C16.6046 37.1876 16.7735 36.4112 16.689 36.2818C16.5623 36.1955 15.591 36.4112 14.493 36.7994C12.0436 37.6621 10.3966 37.6621 8.91857 36.8857C6.25803 35.4623 4.94888 32.788 5.54011 30.0275C6.46919 25.671 9.08749 24.5496 13.6062 26.4906C14.2819 26.7925 14.3663 26.62 14.2396 25.1534L14.1129 23.4712L10.3122 23.3418C7.01819 23.2556 6.2158 23.385 4.31542 24.2908Z" fill="#78350F"/>
+                      <path d="M24.9239 23.9024C20.363 25.1964 17.7447 28.7333 18.2515 33.0035C18.7583 37.6187 23.108 40.4224 29.2315 39.9479C35.735 39.5166 39.7047 33.823 37.382 28.302C35.7772 24.42 30.1183 22.4359 24.9239 23.9024ZM31.0896 27.353C32.5255 29.0352 33.0745 31.3644 32.5255 33.4779C31.0896 38.9559 25.2196 38.8265 23.5726 33.2192C22.0945 28.1726 27.8801 23.6436 31.0896 27.353Z" fill="#78350F"/>
+                      <path d="M40.0431 23.5574C40.0008 23.7731 40.0431 24.075 40.1275 24.3338C40.212 24.5495 40.3809 28.0432 40.5076 32.0978L40.7187 39.4304L43.4637 39.5598L46.251 39.6892L46.2087 36.1092V32.5291L48.4047 32.3997C50.6852 32.2703 51.7832 31.4939 51.3187 30.3724C51.1497 29.898 50.4318 29.7254 48.5314 29.7254H45.9976V27.8276C45.9976 25.4984 46.6311 25.1533 49.6294 25.8435C51.4454 26.2748 51.741 26.2317 52.2477 25.5415C52.5434 25.1102 52.7123 24.5063 52.67 24.1181C52.5434 23.6005 51.4876 23.4711 46.2932 23.3417C42.8725 23.2986 40.0431 23.3849 40.0431 23.5574Z" fill="#78350F"/>
+                      <path d="M55.2453 23.5574C55.2031 23.7731 55.2453 24.075 55.3298 24.3338C55.4143 24.5495 55.5832 28.0432 55.7099 32.0978L55.921 39.4304L58.666 39.5598L61.4532 39.6892L61.411 36.1092V32.5291L63.607 32.3997C65.8875 32.2703 66.9855 31.4939 66.5209 30.3724C66.352 29.898 65.6341 29.7254 63.7337 29.7254H61.1999V27.8276C61.1999 25.4984 61.8333 25.1533 64.8317 25.8435C66.6476 26.2748 66.9432 26.2317 67.45 25.5415C67.7456 25.1102 67.9145 24.5063 67.8723 24.1181C67.7456 23.6005 66.6899 23.4711 61.4955 23.3417C58.0748 23.2986 55.2453 23.3849 55.2453 23.5574Z" fill="#78350F"/>
+                      <path d="M70.4486 23.5576C70.4064 23.7732 70.4486 24.0752 70.4909 24.334C70.5753 24.5496 70.5753 27.8709 70.5753 31.6235C70.5331 36.0231 70.702 38.7404 70.9976 39.0855C71.3355 39.5168 72.9403 39.6462 77.0789 39.6462H82.7378L83.4557 38.1366C84.3426 36.2819 84.0469 35.9368 82.3155 36.8426C81.4709 37.2739 80.2462 37.4896 78.8103 37.4033L76.6143 37.2739L76.4876 34.7722L76.3609 32.3136H78.4303C80.584 32.3136 81.4709 31.796 81.4709 30.502C81.4709 29.855 81.0908 29.7256 78.8948 29.7256H76.3609L76.4876 27.6552C76.6143 25.4123 76.8677 25.2829 80.2884 25.973C81.6398 26.275 81.9354 26.1887 82.3155 25.4123C83.329 23.4713 82.78 23.2556 76.4032 23.2556C73.1514 23.2556 70.4486 23.385 70.4486 23.5576Z" fill="#78350F"/>
+                      <path d="M86.4542 30.4589C86.4964 34.4703 86.6654 38.1366 86.7498 38.6542C86.961 39.6462 87.0877 39.6462 92.9155 39.6462H98.8278L99.4613 38.1366C100.264 36.1093 100.264 36.1093 98.5322 36.8426C96.674 37.619 93.1267 37.7052 92.5777 36.9288C92.3665 36.6701 92.2398 35.7211 92.282 34.9016C92.3243 34.0821 92.4087 33.1331 92.4087 32.8312C92.451 32.4861 93.1689 32.3136 94.5203 32.3136C96.674 32.3136 97.8143 31.5372 97.392 30.4157C97.223 29.9844 96.3784 29.7256 94.6892 29.6393L92.2398 29.5099L92.1131 27.9571C91.9442 25.7142 92.7044 25.1966 95.4494 25.8005C97.392 26.2318 97.6876 26.1887 98.1944 25.5417C98.5322 25.1104 98.7434 24.4634 98.6589 24.1183C98.5744 23.6007 97.4764 23.4713 92.451 23.3419L86.3275 23.2125L86.4542 30.4589Z" fill="#78350F"/>
+                      </svg>
+                  </span>
+                  <img src="public/images/blog-4.png" alt="" class="rounded-blogImage w-full h-full lg:w-full object-cover" />
+                </a>
+              </div>
+              <!-- article body -->
+              <div class="flex flex-grow flex-col lg:flex-row lg:items-center justify-between py-2.5 lg:py-0 gap-y-5">
+                <a href="" class="font-DanaMedium lg:font-DanaRegular font-[500] lg:font-[400] text-sm lg:text-lg leading-7 text-zinc-700 dark:text-white line-clamp-2 ml-0 lg:ml-5 transition-colors">طرز تهیه قهوه دمی با دستگاه اروپرس خط دوم اسم طولانی</a>
+                <span class="w-full h-px bg-white/10 lg:hidden"></span>
+                <div class="w-full flex flex-row lg:flex-col items-center justify-between lg:w-1/4 lg:px-5 lg:border-r lg:dark:border-white/10 lg:border-gray-100 transition-colors">
+                  <div class="flex items-center flex-row lg:flex-col text-emerald-500">
+                    <h3 class="font-DanaRegular text-xs leading-4 lg:font-DanaDemiBold lg:text-2xl lg:leading-8 text-center lg:font-[600]">21</h3>
+                    <span class="text-xs leading-4 lg:text-sm lg:leading-5">مرداد</span>
+                    <span class="text-xs leading-4 lg:text-sm lg:leading-5">1402</span>
+                  </div>
+                  <a href="" class="flex items-center gap-x-1 px-2.5 py-0.5 text-xs font-DanaMedium text-orange-300 bg-orange-200/20 rounded-md lg:hidden"
+                    >مطالعه
+                    <svg class="w-2.5 h-2.5">
+                      <use href="#chevron-left"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- best coffe -->
+      <section class="max-w-[1920px] mx-auto pt-7 lg:pt-28">
+        <div class="container flex flex-col lg:flex-row items-center gap-y-8 lg:gap-y-0 lg:gap-x-5">
+          <img src="public/images/contact.png" alt="" class="w-[296px]" />
+          <div class="flex flex-col gap-y-5 lg:gap-y-6">
+            <div class="flex flex-col gap-y-[6px]">
+              <h2 class="font-MorabaMedium font-[500] text-2xl lg:text-5xl leading-8 lg:leading-[48px] text-zinc-700 dark:text-white transition-colors">یکی از بهترین قهوه ها !</h2>
+              <h4 class="font-MorabaLight font-[300] text-lg lg:text-3xl leading-8 lg:leading-[48px] text-zinc-700 dark:text-white transition-colors">کیفیت قهوه را از ما بخواهید ...</h4>
+            </div>
+            <div class="flex items-center gap-x-2.5">
+              <span class="block w-1 h-1 rounded-full bg-zinc-700 dark:bg-gray-400 transition-colors"></span>
+              <span class="block w-1 h-1 rounded-full bg-zinc-700 dark:bg-gray-400 transition-colors"></span>
+              <span class="block w-1 h-1 rounded-full bg-zinc-700 dark:bg-gray-400 transition-colors"></span>
+            </div>
+            <p class="font-DanaRegular font-[400] text-lg lg:text-2xl leading-[28px] lg:leading-8 text-zinc-700 dark:text-white transition-colors text-justify">فضای گرم و دنج ما را احساس کنید، جایی که همه می توانند قهوه معطری پیدا کنند و دسرهای خوشمزه ما را که کاملاً با قهوه داغ همراه شده است، امتحان کنند. فضای داخلی شیک و کارکنان خوش برخورد ما روز شما را می سازد!</p>
+            <a href="" class="w-fit flex items-center gap-x-2 py-[14px] px-6 rounded-[100px] border-1 border-orange-300 text-orange-300 transition-colors">
+              <svg class="w-[22px] h-[22px]">
+                <use href="#phone"></use>
+              </svg>
+              <span class="lg:text-xl tracking-tight leading-[22px] lg:leading-7">ثبت سفارش تلفنی</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="max-w-[1920px] mx-auto pt-16 lg:pt-28 pb-12 lg:pb-[144px]">
+        <div class="container">
+          <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 lg:gap-x-[100px] lg:gap-y-6 child:p-5 lg:child:p-0 lg:child:border-0">
+            <div class="flex flex-col lg:flex-row items-center gap-y-5 gap-x-4 border-l-1 border-l-gray-300 dark:border-l-white/10 border-b-1 border-b-gray-300 dark:border-b-white/10 transition-colors">
+              <svg class="hidden dark:block w-[66px] h-[73px]">
+                <use href="#dark-support"></use>
+              </svg>
+              <svg class="block dark:hidden w-[66px] h-[73px]">
+                <use href="#light-support"></use>
+              </svg>
+              <div class="flex flex-col gap-y-1 lg:gap-y-3">
+                <span class="font-[600] text-zinc-700 dark:text-white text-sm lg:text-lg leading-6 transition-colors">پشتیبانی شبانه روزی</span>
+                <span class="text-zinc-700 dark:text-white text-xs lg:text-sm leading-6 transition-colors">7 روز هفته ، 24 ساعته</span>
+              </div>
+            </div>
+            <div class="flex flex-col lg:flex-row items-center gap-y-5 gap-x-4 border-b-1 border-b-gray-300 dark:border-b-white/10 transition-colors">
+              <svg class="hidden dark:block w-[66px] h-[73px]">
+                <use href="#dark-support"></use>
+              </svg>
+              <svg class="block dark:hidden w-[66px] h-[73px]">
+                <use href="#light-support"></use>
+              </svg>
+              <div class="flex flex-col gap-y-1 lg:gap-y-3">
+                <span class="font-[600] text-zinc-700 dark:text-white text-sm lg:text-lg leading-6 transition-colors">پشتیبانی شبانه روزی</span>
+                <span class="text-zinc-700 dark:text-white text-xs lg:text-sm leading-6 transition-colors">7 روز هفته ، 24 ساعته</span>
+              </div>
+            </div>
+            <div class="flex flex-col lg:flex-row items-center gap-y-5 gap-x-4 border-l-1 border-l-gray-300 dark:border-l-white/10 transition-colors">
+              <svg class="hidden dark:block w-[66px] h-[73px]">
+                <use href="#dark-support"></use>
+              </svg>
+              <svg class="block dark:hidden w-[66px] h-[73px]">
+                <use href="#light-support"></use>
+              </svg>
+              <div class="flex flex-col gap-y-1 lg:gap-y-3">
+                <span class="font-[600] text-zinc-700 dark:text-white text-sm lg:text-lg leading-6 transition-colors">پشتیبانی شبانه روزی</span>
+                <span class="text-zinc-700 dark:text-white text-xs lg:text-sm leading-6 transition-colors">7 روز هفته ، 24 ساعته</span>
+              </div>
+            </div>
+            <div class="flex flex-col lg:flex-row items-center gap-y-5 gap-x-4">
+              <svg class="hidden dark:block w-[66px] h-[73px]">
+                <use href="#dark-support"></use>
+              </svg>
+              <svg class="block dark:hidden w-[66px] h-[73px]">
+                <use href="#light-support"></use>
+              </svg>
+              <div class="flex flex-col gap-y-1 lg:gap-y-3">
+                <span class="font-[600] text-zinc-700 dark:text-white text-sm lg:text-lg leading-6 transition-colors">پشتیبانی شبانه روزی</span>
+                <span class="text-zinc-700 dark:text-white text-xs lg:text-sm leading-6 transition-colors">7 روز هفته ، 24 ساعته</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="max-w-[1920px] mx-auto bg-zinc-700 px-4 lg:px-24 pt-8 lg:pt-[62px] pb-8 lg:pb-11 relative flex flex-col" id="footer">
+      <!-- curve -->
+      <div class="absolute top-0 mx-auto left-0 right-0 hidden lg:flex justify-center z-[1] transition-colors">
+        <svg width="100" class="text-gray-100 dark:text-zinc-800 transition-colors rotate-180" height="22" viewBox="0 0 100 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 0C69 0 81 22 100 22L0 22C18.75 22 31 0 50 0Z" fill="currentColor" />
+        </svg>
+      </div>
+      <button class="absolute top-0 left-0 right-0 z-[7] -translate-y-1/2 mx-auto w-7 h-7 rounded-full border-2 border-orange-300 hidden lg:flex items-center justify-center" id="go-top-btn">
+        <svg class="w-4 h-4 rotate-90 text-zinc-700 dark:text-white">
+          <use href="#chevron-left"></use>
+        </svg>
+      </button>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-x-[112px] gap-5 pb-10 border-b border-b-white/10">
+        <div class="flex flex-col gap-y-6 lg:gap-y-[18px]">
+          <div class="flex items-center gap-x-5">
+            <img src="public/images/app-logo.png" class="w-14" alt="" />
+            <img src="public/images/logo-type.svg" class="w-32" alt="" />
+          </div>
+          <p class="text-lg leading-7 lg:text-xl lg:leading-[48px] text-gray-300 text-justify">ما برآنیم تا با پیشرو بودن در فرآیند تولید، نوع و کیفیت محصول، خدمات و توزیع، الگویی برای تولیدکنندگان ایرانی باشیم و به مرجع فرهنگ قهوه در ایران تبدیل شویم.</p>
+        </div>
+        <div class="flex flex-col gap-y-6 lg:gap-y-7 w-fit lg:pt-6">
+          <h3 class="font-[600] text-2xl leading-7 text-white">دسترسی سریع</h3>
+          <div class="flex gap-x-10 lg:gap-x-16 w-fit">
+            <ul class="flex flex-col gap-y-2.5 lg:gap-y-5">
+              <li><a href="" class="footer-link lg:text-xl lg:leading-7 text-gray-300 hover:text-orange-300 transition-colors flex items-baseline gap-x-3 hover:before:bg-orange-300 before:transition-colors">حریم خصوصی</a></li>
+              <li><a href="" class="footer-link lg:text-xl lg:leading-7 text-gray-300 hover:text-orange-300 transition-colors flex items-baseline gap-x-3 hover:before:bg-orange-300 before:transition-colors">عودت کالا</a></li>
+              <li><a href="" class="footer-link lg:text-xl lg:leading-7 text-gray-300 hover:text-orange-300 transition-colors flex items-baseline gap-x-3 hover:before:bg-orange-300 before:transition-colors">شرایط استفاده</a></li>
+              <li><a href="" class="footer-link lg:text-xl lg:leading-7 text-gray-300 hover:text-orange-300 transition-colors flex items-baseline gap-x-3 hover:before:bg-orange-300 before:transition-colors">ثبت سفارش</a></li>
+            </ul>
+            <ul class="flex flex-col gap-y-2.5 lg:gap-y-5">
+              <li><a href="" class="footer-link lg:text-xl lg:leading-7 text-gray-300 hover:text-orange-300 transition-colors flex items-baseline gap-x-3 hover:before:bg-orange-300 before:transition-colors">پرسش های متداول</a></li>
+              <li><a href="" class="footer-link lg:text-xl lg:leading-7 text-gray-300 hover:text-orange-300 transition-colors flex items-baseline gap-x-3 hover:before:bg-orange-300 before:transition-colors">فرصت های شغلی</a></li>
+              <li><a href="" class="footer-link lg:text-xl lg:leading-7 text-gray-300 hover:text-orange-300 transition-colors flex items-baseline gap-x-3 hover:before:bg-orange-300 before:transition-colors">ضمانت نامه ها</a></li>
+              <li><a href="" class="footer-link lg:text-xl lg:leading-7 text-gray-300 hover:text-orange-300 transition-colors flex items-baseline gap-x-3 hover:before:bg-orange-300 before:transition-colors">ارتباط با ما</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-col gap-y-6 lg:gap-y-7 lg:pt-6">
+          <h3 class="font-[600] text-2xl leading-7 text-white">در تماس باشیم</h3>
+          <div class="flex flex-wrap items-center gap-4 lg:gap-5">
+            <a href="" class="flex gap-x-3 text-gray-300 hover:text-orange-300 transition-colors">
+              <svg class="w-5 lg:w-6 h-5 lg:h-6">
+                <use href="#location"></use>
+              </svg>
+              <span class="lg:text-xl leading-7">بلوار میرداماد، خیابان البرز، کوچه قبادیان شرقی، پلاک ۳۳</span>
+            </a>
+            <a href="" class="flex gap-x-3 text-gray-300 hover:text-orange-300 transition-colors w-full lg:w-fit">
+              <svg class="w-5 lg:w-6 h-5 lg:h-6">
+                <use href="#envelop"></use>
+              </svg>
+              <span class="lg:text-xl leading-7">info@Coffee.com</span>
+            </a>
+            <a href="" class="flex gap-x-3 text-gray-300 hover:text-orange-300 transition-colors">
+              <svg class="w-5 lg:w-6 h-5 lg:h-6">
+                <use href="#phone"></use>
+              </svg>
+              <span class="lg:text-xl leading-7">0902 123 6628</span>
+            </a>
+            <a href="" class="flex text-gray-300 hover:text-orange-300 transition-colors">
+              <span class="lg:text-xl leading-7">021 - 6789012</span>
+            </a>
+          </div>
+          <div class="flex flex-wrap lg:flex-nowrap items-center gap-[6px] lg:gap-6 lg:mt-[12px]">
+            <a href="" class="grow flex items-center gap-x-3 px-5 py-4 lg:px-8 lg:py-2.5 rounded-xl border-1 border-orange-200 text-orange-200 bg-transparent hover:bg-socialLinkHover hover:text-zinc-700 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" width="39" height="38" viewBox="0 0 39 38" fill="none" class="w-[18px] h-[18px] lg:w-[26px] lg:h-[26px]">
+                <path d="M13.7405 5.9375C9.52393 5.9375 6.05884 9.39795 6.05884 13.6191V24.3809C6.05884 28.5974 9.51929 32.0625 13.7405 32.0625H24.5022C28.7188 32.0625 32.1838 28.6021 32.1838 24.3809V13.6191C32.1838 9.40259 28.7234 5.9375 24.5022 5.9375H13.7405ZM13.7405 8.3125H24.5022C27.4385 8.3125 29.8088 10.6829 29.8088 13.6191V24.3809C29.8088 27.3171 27.4385 29.6875 24.5022 29.6875H13.7405C10.8042 29.6875 8.43384 27.3171 8.43384 24.3809V13.6191C8.43384 10.6829 10.8042 8.3125 13.7405 8.3125ZM26.135 10.9102C25.5366 10.9102 25.0588 11.3879 25.0588 11.9863C25.0588 12.5847 25.5366 13.0625 26.135 13.0625C26.7334 13.0625 27.2112 12.5847 27.2112 11.9863C27.2112 11.3879 26.7334 10.9102 26.135 10.9102ZM19.1213 11.875C15.2017 11.875 11.9963 15.0803 11.9963 19C11.9963 22.9197 15.2017 26.125 19.1213 26.125C23.041 26.125 26.2463 22.9197 26.2463 19C26.2463 15.0803 23.041 11.875 19.1213 11.875ZM19.1213 14.25C21.7607 14.25 23.8713 16.3606 23.8713 19C23.8713 21.6394 21.7607 23.75 19.1213 23.75C16.4819 23.75 14.3713 21.6394 14.3713 19C14.3713 16.3606 16.4819 14.25 19.1213 14.25Z" fill="currentcolor" />
+              </svg>
+              <span class="lg:text-xl leading-5 lg:leading-7 font-[500]">@golden_coffee</span>
+            </a>
+            <a href="" class="grow flex items-center gap-x-3 px-[19px] py-[15px] lg:px-8 lg:py-2.5 rounded-xl border-1 border-orange-200 text-orange-200 bg-transparent hover:bg-socialLinkHover hover:text-zinc-700 transition-colors">
+              <!-- <svg xmlns="http://www.w3.org/2000/svg" width="39" height="38" viewBox="0 0 39 38" fill="none" class="w-[18px] h-[18px] lg:w-[26px] lg:h-[26px]">
+      <path d="M13.7405 5.9375C9.52393 5.9375 6.05884 9.39795 6.05884 13.6191V24.3809C6.05884 28.5974 9.51929 32.0625 13.7405 32.0625H24.5022C28.7188 32.0625 32.1838 28.6021 32.1838 24.3809V13.6191C32.1838 9.40259 28.7234 5.9375 24.5022 5.9375H13.7405ZM13.7405 8.3125H24.5022C27.4385 8.3125 29.8088 10.6829 29.8088 13.6191V24.3809C29.8088 27.3171 27.4385 29.6875 24.5022 29.6875H13.7405C10.8042 29.6875 8.43384 27.3171 8.43384 24.3809V13.6191C8.43384 10.6829 10.8042 8.3125 13.7405 8.3125ZM26.135 10.9102C25.5366 10.9102 25.0588 11.3879 25.0588 11.9863C25.0588 12.5847 25.5366 13.0625 26.135 13.0625C26.7334 13.0625 27.2112 12.5847 27.2112 11.9863C27.2112 11.3879 26.7334 10.9102 26.135 10.9102ZM19.1213 11.875C15.2017 11.875 11.9963 15.0803 11.9963 19C11.9963 22.9197 15.2017 26.125 19.1213 26.125C23.041 26.125 26.2463 22.9197 26.2463 19C26.2463 15.0803 23.041 11.875 19.1213 11.875ZM19.1213 14.25C21.7607 14.25 23.8713 16.3606 23.8713 19C23.8713 21.6394 21.7607 23.75 19.1213 23.75C16.4819 23.75 14.3713 21.6394 14.3713 19C14.3713 16.3606 16.4819 14.25 19.1213 14.25Z" fill="currentcolor"/>
+      </svg> -->
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="39" height="38" viewBox="0 0 39 38" fill="none" class="w-[18px] h-[18px] lg:w-[26px] lg:h-[26px]">
+                <path d="M31.0136 7.9292C32.3492 7.9292 32.7007 8.93937 32.3056 11.3112C31.8536 14.0234 30.5513 23.0033 29.5126 28.5933C29.1152 30.7324 28.3988 31.6547 27.3561 31.6547C26.783 31.6547 26.1116 31.376 25.3405 30.867C24.2955 30.1766 19.0199 26.6877 17.8743 25.8684C16.8293 25.1218 15.3877 24.2233 17.1959 22.4547C17.8395 21.8245 22.0567 17.7973 25.3421 14.6631C25.6928 14.3282 25.3991 13.8176 25.0096 13.8176C24.921 13.8176 24.8268 13.8445 24.7349 13.9055C20.3063 16.8426 14.1654 20.9189 13.384 21.4501C12.6026 21.9805 11.841 22.3209 10.8261 22.3209C10.3076 22.3209 9.72255 22.2322 9.03459 22.0343C7.49638 21.5926 5.99459 21.0661 5.40955 20.865C3.15726 20.0924 3.69163 19.0909 5.87901 18.1282C14.6491 14.2704 25.9976 9.56637 27.5643 8.91562C29.0907 8.28149 30.2243 7.9292 31.0136 7.9292ZM31.0136 5.5542C29.9306 5.5542 28.6268 5.90332 26.6547 6.72112L26.418 6.81928C17.9986 10.3153 10.3646 13.5595 4.92267 15.9535C4.07242 16.328 1.48605 17.4656 1.58659 19.8454C1.62934 20.8722 2.19459 22.2718 4.63926 23.1102L4.81976 23.172C5.50217 23.4071 6.92322 23.8971 8.37988 24.3159C9.26655 24.5708 10.0677 24.6943 10.8269 24.6943C12.1443 24.6943 13.1647 24.3183 13.9627 23.8805C13.9588 24.0135 13.9619 24.1473 13.9722 24.2819C14.1163 26.1122 15.5318 27.116 16.3773 27.7161L16.4953 27.8C17.7437 28.693 23.3938 32.4257 24.0335 32.8477C25.2376 33.6425 26.3246 34.0281 27.3577 34.0281C28.9822 34.0281 31.0809 33.1604 31.8488 29.0263C32.578 25.1052 33.4203 19.6277 34.0354 15.6282C34.2975 13.9213 34.5128 12.5217 34.6498 11.7007C34.9261 10.0429 35.0527 8.16512 33.8993 6.80424C33.4148 6.23424 32.5218 5.5542 31.0136 5.5542Z" fill="currentcolor" />
+              </svg>
+
+              <span class="lg:text-xl leading-5 lg:leading-7 font-[500]">@golden_coffee</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="pt-10 flex flex-col lg:flex-row lg:justify-between gap-y-4">
+        <div class="flex gap-x-2.5">
+       <div class="w-8">
+        <span class="circle lg-circle"
+        ><span class="circle md-circle"><span class="circle sm-circle"></span></span
+      ></span>
+       </div>
+          <p class="text-gray-300 font-[500]">تمام حقوق این رابط کاربری متعلق به <a href="" class="text-orange-200">سبزلرن</a> میباشد و دانشجوی این دوره اجازه استفاده آن را در مصارف شخصی و تجاری ندارد.</p>
+        </div>
+        <!-- <div class=""> -->
+          <p class="text-gray-300 font-[500] text-left">Copyright © 2023 Golden Coffee. All rights reserved.</p>
+        <!-- </div> -->
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="public/js/app.js"></script>
+  </body>
+</html>
